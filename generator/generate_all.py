@@ -79,16 +79,46 @@ def main():
     )
     print(f"     Generated {n} footprints")
     total += n
-    # B4: SOIC / SOP
-    # B5: QFP
-    # B6: SOJ / PLCC
+    # B4-B5: SOIC / SOP / SSOP / TSSOP / MSOP / QFP
+    print("\n[B4-B5] Gull-wing ICs (SOIC/SSOP/TSSOP/MSOP/QFP)...")
+    from generator.families.ipc7353_soic import generate_gullwing_library
+    n = generate_gullwing_library(
+        str(DATA / "jedec" / "gullwing_ic.csv"),
+        str(OUTPUT / "IPC7351B_SOIC.pretty"),
+    )
+    print(f"     Generated {n} footprints")
+    total += n
     # B7: BGA / LGA
+    print("\n[B7] BGA / FBGA...")
+    from generator.families.ipc7358_bga import generate_bga_library
+    n = generate_bga_library(
+        str(DATA / "jedec" / "bga_components.csv"),
+        str(OUTPUT / "IPC7351B_BGA.pretty"),
+    )
+    print(f"     Generated {n} footprints")
+    total += n
+
     # B8: QFN / SON / DFN
-    # B9: LCC + Chip Arrays
+    print("\n[B8] QFN / SON / DFN...")
+    from generator.families.ipc7359_qfn import generate_nolead_library
+    n = generate_nolead_library(
+        str(DATA / "jedec" / "qfn_components.csv"),
+        str(OUTPUT / "IPC7351B_QFN.pretty"),
+    )
+    print(f"     Generated {n} footprints")
+    total += n
+
     # B10: DIP
-    # B11: WLCSP
-    # B12: SC-70
-    # B13: Crystal / Oscillator
+    print("\n[B10] DIP (through-hole)...")
+    from generator.families.ipc7357_dip import generate_dip_library
+    n = generate_dip_library(
+        str(DATA / "jedec" / "dip_components.csv"),
+        str(OUTPUT / "IPC7351B_DIP.pretty"),
+    )
+    print(f"     Generated {n} footprints")
+    total += n
+
+    # Remaining: B6 (SOJ/PLCC), B9 (LCC), B11-B13 (extended) -- future
 
     elapsed = time.time() - t0
     print(f"\n{'=' * 60}")
