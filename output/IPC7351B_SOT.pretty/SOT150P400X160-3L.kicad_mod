@@ -1,0 +1,181 @@
+(footprint "SOT150P400X160-3L"
+	(version 20260206)
+	(generator "landforge")
+	(layer "F.Cu")
+	(descr "IPC-7351B Level C SOT-89-3. Table 3-2. Z=4.65 G=1.65 X=0.55. Courtyard excess=0.10mm.")
+	(tags "SOT150P400X160-3L sot-89-3 IPC7351B density_C")
+	(property "Reference" "REF**"
+		(at 0 -1.5 0)
+		(layer "F.SilkS")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SOT150P400X160-3L"
+		(at 0 1.5 0)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "IPC_Table" "3-2"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "DensityLevel" "C"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LandForge" "true"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -0.95 -2.25)
+		(end 1.25 -2.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_line
+		(start 1.25 -2.25)
+		(end 1.25 2.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_line
+		(start 1.25 2.25)
+		(end -1.25 2.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_line
+		(start -1.25 2.25)
+		(end -1.25 -1.95)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_line
+		(start -1.25 -1.95)
+		(end -0.95 -2.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_line
+		(start -1.25 -2.25)
+		(end 1.25 -2.25)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start -1.25 2.25)
+		(end 1.25 2.25)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_rect
+		(start -2.45 -2.35)
+		(end 2.45 2.35)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+	)
+	(fp_circle
+		(center -2.725 -2.25)
+		(end -2.625 -2.25)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0.0 0.0 0)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -1.575 -1.5)
+		(size 1.5 0.55)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+	)
+	(pad "2" smd roundrect
+		(at -1.575 0.0)
+		(size 1.5 0.55)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+	)
+	(pad "3" smd roundrect
+		(at -1.575 1.5)
+		(size 1.5 0.55)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+	)
+	(pad "4" smd roundrect
+		(at 0.0 0.0)
+		(size 2.0 3.8)
+		(layers "F.Cu" "F.Mask")
+		(roundrect_rratio 0.1)
+		(pad_prop_heatsink)
+	)
+	(embedded_fonts no)
+)

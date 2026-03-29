@@ -1,0 +1,123 @@
+(footprint "RESM6332X320M"
+	(version 20260206)
+	(generator "landforge")
+	(layer "F.Cu")
+	(descr "IPC-7351B Level A Molded Resistor 2512 (6332 Metric). Table 3-13. Z=7.05 G=2.75 X=3.25. Courtyard excess=0.50mm.")
+	(tags "RESM6332X320M molded resistor 2512 6332 IPC7351B density_A")
+	(property "Reference" "REF**"
+		(at 0 -1.5 0)
+		(layer "F.SilkS")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "RESM6332X320M"
+		(at 0 1.5 0)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "IPC_Table" "3-13"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "DensityLevel" "A"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LandForge" "true"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -3.15 -1.785)
+		(end 3.15 -1.785)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start -3.15 1.785)
+		(end 3.15 1.785)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_rect
+		(start -4.05 -2.15)
+		(end 4.05 2.15)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+	)
+	(fp_rect
+		(start -3.15 -1.6)
+		(end 3.15 1.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0.0 0.0 0)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -2.45 0.0)
+		(size 2.15 3.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+	)
+	(pad "2" smd roundrect
+		(at 2.45 0.0)
+		(size 2.15 3.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+	)
+	(embedded_fonts no)
+)

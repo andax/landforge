@@ -1,0 +1,134 @@
+(footprint "CAPC4564X250N"
+	(version 20260206)
+	(generator "landforge")
+	(layer "F.Cu")
+	(descr "IPC-7351B Level B Chip Capacitor 1825 (4564 Metric). Table 3-5. Z=5.45 G=3.30 X=6.65. Courtyard excess=0.25mm.")
+	(tags "CAPC4564X250N chip capacitor chip 1825 4564 IPC7351B density_B")
+	(property "Reference" "REF**"
+		(at 0 -1.5 0)
+		(layer "F.SilkS")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "CAPC4564X250N"
+		(at 0 1.5 0)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "IPC_Table" "3-5"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "DensityLevel" "B"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LandForge" "true"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -2.25 -3.485)
+		(end 2.25 -3.485)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start -2.25 3.485)
+		(end 2.25 3.485)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_rect
+		(start -3.0 -3.6)
+		(end 3.0 3.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+	)
+	(fp_rect
+		(start -2.25 -3.2)
+		(end 2.25 3.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0.0 0.0 0)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -2.1875 0.0)
+		(size 1.075 6.65)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+	)
+	(pad "2" smd roundrect
+		(at 2.1875 0.0)
+		(size 1.075 6.65)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+	)
+	(embedded_fonts no)
+	(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_1825_4564Metric.step"
+		(offset
+			(xyz 0.0 0.0 0.0)
+		)
+		(scale
+			(xyz 1.0 1.0 1.0)
+		)
+		(rotate
+			(xyz 0.0 0.0 0.0)
+		)
+	)
+)

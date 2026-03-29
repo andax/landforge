@@ -1,0 +1,142 @@
+(footprint "SOD36027X120L"
+	(version 20260206)
+	(generator "landforge")
+	(layer "F.Cu")
+	(descr "IPC-7351B Level C SOD-123. Table 3-2. Z=4.35 G=1.05 X=1.35. Courtyard excess=0.10mm.")
+	(tags "SOD36027X120L sod-123 IPC7351B density_C")
+	(property "Reference" "REF**"
+		(at 0 -1.5 0)
+		(layer "F.SilkS")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SOD36027X120L"
+		(at 0 1.5 0)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "IPC_Table" "3-2"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "DensityLevel" "C"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LandForge" "true"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -0.65 0.0)
+		(end -0.25 0.0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_line
+		(start -0.65 -1.35)
+		(end 0.65 -1.35)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start -0.65 1.35)
+		(end 0.65 1.35)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_rect
+		(start -2.3 -1.45)
+		(end 2.3 1.45)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+	)
+	(fp_rect
+		(start -0.65 -1.35)
+		(end 0.65 1.35)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+	)
+	(fp_circle
+		(center -2.575 -1.35)
+		(end -2.475 -1.35)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0.0 0.0 0)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 0.78 0.78)
+				(thickness 0.117)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -1.35 0.0)
+		(size 1.65 1.35)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+	)
+	(pad "2" smd roundrect
+		(at 1.35 0.0)
+		(size 1.65 1.35)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+	)
+	(embedded_fonts no)
+)

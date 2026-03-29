@@ -1,0 +1,13 @@
+[project]
+name = "landforge"
+version = "0.1.0"
+description = "IPC-7351B compliant KiCad footprint library generator"
+requires-python = ">=3.10"
+dependencies = []
+
+[dependency-groups]
+dev = ["pytest"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

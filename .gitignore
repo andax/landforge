@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# uv / venv
+.venv/
+uv.lock
+
+# pytest
+.pytest_cache/
+
+# KiCad backup/autosave
+*.kicad_*-bak
+*-backups/
+fp-info-cache
+
+# Generated output (regenerated from source)
+output/test_validation/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

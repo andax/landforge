@@ -1,0 +1,7 @@
+prefix,name_suffix,body_length,body_diameter,L_min,L_max,T_min,T_max,W_min,W_max,polarized
+RESMELF,MicroMELF-MMU-0102,2.20,1.10,2.00,2.40,0.30,0.50,0.90,1.10,false
+RESMELF,MiniMELF-MMA-0204,3.60,1.40,3.40,3.80,0.40,0.60,1.20,1.60,false
+RESMELF,MELF-MMB-0207,5.80,2.20,5.60,6.00,0.50,0.80,2.00,2.40,false
+DIOMELF,MicroMELF-MMU-0102,2.20,1.10,2.00,2.40,0.30,0.50,0.90,1.10,true
+DIOMELF,MiniMELF-MMA-0204,3.60,1.40,3.40,3.80,0.40,0.60,1.20,1.60,true
+DIOMELF,MELF-MMB-0207,5.80,2.20,5.60,6.00,0.50,0.80,2.00,2.40,true
