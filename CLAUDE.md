@@ -171,5 +171,5 @@ will be generated programmatically from pitch and pin count (not listed in CSV).
 ## Current Status
 
 **Stage A:** Complete (core engine, 37 tests passing)
-**Stage B:** B1-B3 complete (297 footprints), B4-B13 pending
-**Total footprints:** 297 / ~2,910 target
+**Stage B:** B1-B5, B7-B8, B10-B13 complete. B6 (SOJ/PLCC) and B9 (LCC) deferred.
+**Total footprints:** 642 across 12 libraries, generated in 0.08 seconds

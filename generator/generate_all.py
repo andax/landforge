@@ -118,7 +118,37 @@ def main():
     print(f"     Generated {n} footprints")
     total += n
 
-    # Remaining: B6 (SOJ/PLCC), B9 (LCC), B11-B13 (extended) -- future
+    # B11: WLCSP
+    print("\n[B11] WLCSP (Wafer-Level CSP)...")
+    from generator.families.ext_wlcsp import generate_wlcsp_library
+    n = generate_wlcsp_library(
+        str(DATA / "jedec" / "wlcsp_components.csv"),
+        str(OUTPUT / "LandForge_WLCSP.pretty"),
+    )
+    print(f"     Generated {n} footprints")
+    total += n
+
+    # B12: SC-70 family
+    print("\n[B12] SC-70 family (SOT-323 through SOT-963)...")
+    from generator.families.ext_sc70 import generate_sc70_library
+    n = generate_sc70_library(
+        str(DATA / "jedec" / "sc70_components.csv"),
+        str(OUTPUT / "LandForge_SC70.pretty"),
+    )
+    print(f"     Generated {n} footprints")
+    total += n
+
+    # B13: SMD Crystal / Oscillator
+    print("\n[B13] SMD Crystal / Oscillator...")
+    from generator.families.ext_crystal import generate_crystal_library
+    n = generate_crystal_library(
+        str(DATA / "jedec" / "crystal_components.csv"),
+        str(OUTPUT / "LandForge_Crystal.pretty"),
+    )
+    print(f"     Generated {n} footprints")
+    total += n
+
+    # Deferred: B6 (SOJ/PLCC), B9 (LCC) -- low priority legacy packages
 
     elapsed = time.time() - t0
     print(f"\n{'=' * 60}")
