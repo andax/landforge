@@ -260,9 +260,6 @@ All 7 tests must pass.
 uv run pytest tests/ -v -k "chip"
 ```
 
-Plus: a new test file `tests/test_chip_family.py` (to be written in Stage B) that
-verifies all generated chip footprints have valid dimensions.
-
 #### Manual Verification: Batch Visual Inspection
 
 **Purpose:** Spot-check representative footprints from the generated batch.
@@ -272,7 +269,7 @@ verifies all generated chip footprints have valid dimensions.
 1. After generation, count the output:
    ```bash
    ls output/IPC7351B_Chip.pretty/*.kicad_mod | wc -l
-   # Expected: ~300 files
+   # Expected: 135 (45 chip sizes × 3 density levels)
    ```
 
 2. Open KiCad Footprint Editor
