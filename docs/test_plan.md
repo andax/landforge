@@ -203,19 +203,19 @@ All 7 tests must pass.
 
 5. **Measure and compare pads** (use KiCad Measure tool or pad properties):
 
-   | Property | KiCad Stock | LandForge Level B | Acceptable Range |
-   |----------|------------|-------------------|-----------------|
-   | Pad width (X) | 0.9 mm | ? | 0.7 - 1.1 mm |
-   | Pad height (Y) | 0.95 mm | ? | 0.8 - 1.1 mm |
-   | Pad center X | ±0.775 mm | ? | ±0.6 to ±1.0 mm |
-   | Pad shape | Rounded rect | Rounded rect | Must match |
+   | Property | KiCad Stock | LandForge Level B | Delta |
+   |----------|------------|-------------------|-------|
+   | Pad width (X) | 0.80 mm | 0.825 mm | +3% |
+   | Pad height (Y) | 0.95 mm | 0.95 mm | 0% |
+   | Pad center X | ±0.825 mm | ±0.8125 mm | 1.5% |
+   | Pad shape | Rounded rect | Rounded rect | Match |
 
 6. **Measure and compare courtyard:**
 
    | Property | KiCad Stock | LandForge Level B | Note |
    |----------|------------|-------------------|------|
-   | Width | 2.96 mm | ? | Should be similar |
-   | Height | 1.46 mm | ? | Should be similar |
+   | Width | 2.96 mm | 3.00 mm | +1.4% |
+   | Height | 1.46 mm | 1.50 mm | +2.7% |
 
 7. **Compare all 3 density levels visually:**
    - Place Level A, B, C next to each other (spaced 5mm apart)

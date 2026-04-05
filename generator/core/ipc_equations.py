@@ -163,6 +163,12 @@ class LandPatternResult:
 
     Z, G, X are the three fundamental dimensions; pad_length, pad_width,
     and pad_center_to_center are derived for direct use in footprint generation.
+
+    Note: IPC-7351B rounds Z, G, X to the 0.05mm grid, but the derived pad
+    dimensions (pad_length, pad_center_to_center) end up on a 0.025mm grid
+    because they are (Z±G)/2. An optional post-rounding step to snap derived
+    dimensions to 0.05mm would align with KiCad stock library practice but is
+    not required by the standard.
     """
     Z: float  # Overall land pattern span (outer extremity to outer extremity)
     G: float  # Gap between lands (inner edge to inner edge)
