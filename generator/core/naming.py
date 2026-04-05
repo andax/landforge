@@ -2,15 +2,14 @@
 IPC-7351B Land Pattern Naming Convention (Table 3-23).
 
 Encodes component dimensions into standardized IPC names like:
-  RESC1608X55N    (chip resistor, 1.6x0.8mm body, 0.55mm height, nominal)
+  RESC1608X055N   (chip resistor, 1.6x0.8mm body, 0.55mm height, nominal)
   SOIC127P600X175-8N  (SOIC, 1.27mm pitch, 6.00mm span, 1.75mm height, 8 pins, nominal)
   BGA100C100P10X10_1200X1200X185N  (BGA, 100 pins, collapsible, 1.0mm pitch, ...)
 
 Formatting rules from IPC-7351B Table 3-23:
-  - Chip body sizes: 1 digit.1 digit (e.g., 1.6 -> "1.6", 0.8 -> "0.8")
-  - Lead span/height: 2 digits before decimal, 2 after, no decimal point
+  - Chip body sizes: tenths of mm, 2 digits each (e.g., 1.6 -> "16", 0.8 -> "08")
+  - Lead span/height/pitch: hundredths of mm, 3 digits
     (e.g., 6.00 -> "600", 1.75 -> "175", 0.55 -> "055")
-  - Pitch: same as lead span/height format
   - Pin count: plain integer
   - Density suffix: M (most), N (nominal), L (least)
 """
@@ -63,7 +62,7 @@ def name_chip(
     """Generate IPC name for a 2-terminal chip component.
 
     Format: {PREFIX}{BodyL}{BodyW}X{Height}{Density}
-    Example: RESC1608X55N
+    Example: RESC1608X055N
     """
     bl = _chip_dim(body_length)
     bw = _chip_dim(body_width)
@@ -102,7 +101,7 @@ def name_qfp(
     """Generate IPC name for a 4-side leaded component (QFP).
 
     Format: QFP{Pitch}P{SpanX}X{SpanY}X{Height}-{PinQty}{Density}
-    Example: QFP50P700X700X120-48N
+    Example: QFP050P900X900X120-48N
     """
     p = _pitch_dim(pitch)
     sx = _span_dim(lead_span_x)
@@ -151,7 +150,7 @@ def name_nolead(
     """Generate IPC name for a no-lead component (QFN, SON, DFN).
 
     Format: {PREFIX}{Pitch}P{BodyW}X{BodyL}X{Height}-{PinQty}{+ThermalPad}{Density}
-    Example: QFN50P500X500X100-33T340N
+    Example: QFN050P500X500X090-32T340N
     """
     p = _pitch_dim(pitch)
     bw = _span_dim(body_width)
@@ -173,7 +172,7 @@ def name_sot(
     """Generate IPC name for SOT packages.
 
     Format: SOT{Pitch}P{LeadSpan}X{Height}-{PinQty}{Density}
-    Example: SOT95P240X110-3N
+    Example: SOT095P240X110-3N
     """
     return name_leaded_2side("SOT", pitch, lead_span, height, pin_count, level)
 
@@ -187,7 +186,7 @@ def name_sod(
     """Generate IPC name for SOD packages.
 
     Format: SOD{LeadSpan}{BodyW}X{Height}{Density}
-    Example: SOD2513X100N
+    Example: SOD25017X100N
     """
     ls = _span_dim(lead_span)
     bw = _chip_dim(body_width)

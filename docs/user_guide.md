@@ -1,7 +1,9 @@
 # LandForge User Guide
 
-A practical guide for PCB designers using the LandForge IPC-7351B footprint library
-in KiCad.
+A practical guide for PCB designers using LandForge — a parametric footprint
+generator that produces IPC-7351B compliant land patterns from JEDEC standard
+component dimensions. This guide covers using the pre-generated library in
+KiCad; for adding new component sizes, see the project README.
 
 ---
 
@@ -37,21 +39,25 @@ in KiCad.
 
 | Library | Contains |
 |---------|---------|
-| `IPC7351B_Chip.pretty` | Resistors, capacitors, inductors, diodes (chip) |
-| `IPC7351B_Molded.pretty` | Tantalum caps, molded diodes/inductors |
-| `IPC7351B_SOT.pretty` | SOT23, SOT223, SOT89, SOT143 |
-| `IPC7351B_SOIC.pretty` | SOIC, SOP, SSOP, TSSOP, MSOP |
-| `IPC7351B_QFN.pretty` | QFN packages |
-| `IPC7351B_BGA.pretty` | BGA, FBGA |
-| `LandForge_Crystal.pretty` | SMD crystals and oscillators |
+| `IPC7351B_Chip.pretty` | Resistors, capacitors, inductors, diodes (01005–2512) |
+| `IPC7351B_Molded.pretty` | Tantalum caps, molded diodes/inductors/fuses/LEDs |
+| `IPC7351B_SOT.pretty` | SOT-23/89/143/223, SOD-123/323/523, DPAK, D2PAK |
+| `IPC7351B_SOIC.pretty` | SOIC, SSOP, TSSOP, MSOP, QFP (8–256 pin) |
+| `IPC7351B_QFN.pretty` | QFN, SON, DFN with exposed pad |
+| `IPC7351B_BGA.pretty` | BGA and FBGA (0.50–1.27mm pitch) |
+| `LandForge_Crystal.pretty` | SMD crystals and oscillators (2-pin and 4-pin) |
 
-### 1.2 Adding the 3D Model Path
+These libraries cover the standard JEDEC package sizes for each family.
+If your component uses a standard JEDEC package, the correct IPC-7351B
+footprint is already here at all three density levels.
 
-1. Open KiCad > **Preferences > Configure Paths**
-2. Add a new path variable:
-   - **Name:** `LANDFORGE_3DMODEL_DIR`
-   - **Path:** `/path/to/landforge/output_3d/`
-3. Click OK
+### 1.2 3D Models
+
+LandForge footprints reference KiCad's stock 3D models where available. No
+additional path configuration is needed for these.
+
+Parametric 3D model generation for packages without stock models is planned
+(Stage C) but not yet implemented.
 
 ### 1.3 Verifying Installation
 
@@ -67,31 +73,27 @@ LandForge footprints are organized by **IPC component family**, not by component
 function. This differs from KiCad's stock library where resistors, capacitors, and
 inductors are in separate libraries even though they use the same package.
 
-```
-IPC7351B_Chip.pretty/       ← All 2-terminal chip packages (R, C, L, D)
-IPC7351B_Molded.pretty/     ← Molded body packages (tantalum, power inductors)
-IPC7351B_MELF.pretty/       ← MELF cylindrical packages
-IPC7351B_SOT.pretty/        ← SOT23, SOT89, SOT143, SOT223
-IPC7351B_SOD.pretty/        ← SOD123, SOD323, SODFL
-IPC7351B_DPAK.pretty/       ← DPAK, D2PAK
-IPC7351B_Electrolytic.pretty/ ← Aluminum electrolytic
-IPC7351B_SOIC.pretty/       ← SOIC, SOP, SSOP, TSSOP, MSOP
-IPC7351B_QFP.pretty/        ← QFP, LQFP, TQFP
-IPC7351B_SOJ.pretty/        ← SOJ (J-lead)
-IPC7351B_PLCC.pretty/       ← PLCC (J-lead 4-side)
-IPC7351B_DIP.pretty/        ← DIP through-hole
-IPC7351B_BGA.pretty/        ← BGA, FBGA, CGA, LGA
-IPC7351B_QFN.pretty/        ← QFN
-IPC7351B_SON.pretty/        ← SON
-IPC7351B_DFN.pretty/        ← DFN, PQFN, PSON
-IPC7351B_LCC.pretty/        ← LCC (leadless chip carrier)
-LandForge_WLCSP.pretty/    ← Wafer-level chip scale
-LandForge_SC70.pretty/      ← SC-70 SOT variants
-LandForge_Crystal.pretty/   ← SMD crystals and oscillators
-```
+Each library corresponds to a JEDEC component database (`data/jedec/*.csv`) that
+defines the standard package dimensions for that family. Every JEDEC size is
+generated at all three IPC-7351B density levels (A, B, C), indicated by the
+suffix letter in the footprint name (M, N, L).
 
-Each library contains footprints at **all three density levels** (A, B, C).
-The density level is indicated by the suffix letter in the footprint name.
+```
+IPC7351B_Chip.pretty/          ← 45 chip sizes (R, C, L, D: 01005–2512)     135 fp
+IPC7351B_Molded.pretty/        ← 23 molded body sizes (tantalum, power)       69 fp
+IPC7351B_MELF.pretty/          ← 6 MELF cylindrical sizes                     18 fp
+IPC7351B_Electrolytic.pretty/  ← 14 electrolytic sizes (3–16mm diameter)       42 fp
+IPC7351B_SOT.pretty/           ← 11 SOT/SOD/DPAK packages                     33 fp
+IPC7351B_SOIC.pretty/          ← 42 gull-wing ICs (SOIC/SSOP/TSSOP/MSOP/QFP) 126 fp
+IPC7351B_BGA.pretty/           ← 13 BGA/FBGA sizes (0.50–1.27mm pitch)        39 fp
+IPC7351B_QFN.pretty/           ← 14 QFN/SON/DFN sizes with exposed pad        42 fp
+IPC7351B_DIP.pretty/           ← 11 DIP through-hole sizes (8–64 pin)         33 fp
+LandForge_WLCSP.pretty/       ← 12 WLCSP sizes                               36 fp
+LandForge_SC70.pretty/         ← 13 SC-70 family sizes (SOT-323–SOT-963)      39 fp
+LandForge_Crystal.pretty/      ← 10 SMD crystal/oscillator sizes              30 fp
+                                                                       ──────────
+                                 214 JEDEC sizes × 3 density levels  = 642 total
+```
 
 ---
 
@@ -214,9 +216,9 @@ When assigning footprints in the KiCad Schematic Editor:
 3. In the footprint browser, search for `CAPC1005` or `0402`
 
 4. You'll see three variants:
-   - `CAPC1.00.5X050M` -- Level A (largest pads)
-   - `CAPC1.00.5X050N` -- Level B (standard)
-   - `CAPC1.00.5X050L` -- Level C (smallest pads)
+   - `CAPC1005X050M` -- Level A (largest pads)
+   - `CAPC1005X050N` -- Level B (standard)
+   - `CAPC1005X050L` -- Level C (smallest pads)
 
 5. Choose based on your project's density level decision
 
@@ -228,10 +230,10 @@ When assigning footprints in the KiCad Schematic Editor:
 
 2. Search for `QFP50P` (QFP at 0.50mm pitch) or `LQFP-48` in tags
 
-3. Find: `QFP50P900X900X140-48N`
+3. Find: `QFP050P900X900X120-48N`
    - 0.50mm pitch
    - 9.00mm lead span (each direction)
-   - 1.40mm height
+   - 1.20mm height
    - 48 pins
    - Level B (nominal)
 
@@ -246,11 +248,11 @@ When assigning footprints in the KiCad Schematic Editor:
 
 2. Search for `QFN50P500X500` (QFN at 0.50mm pitch, 5x5mm)
 
-3. Find: `QFN50P500X500X100-33T340N`
+3. Find: `QFN050P500X500X090-32T340N`
    - 0.50mm pitch
    - 5.00 x 5.00mm body
-   - 1.00mm height
-   - 33 pads (32 signal + 1 thermal)
+   - 0.90mm height
+   - 32 signal pads (+ 1 thermal)
    - Thermal pad 3.40mm
    - Level B
 
@@ -268,14 +270,16 @@ the physical dimensions. Here's how to decode it:
 ### 6.1 Chip Components (2-terminal)
 
 ```
-RESC 1.6 0.8 X 055 N
-│    │   │   │ │   └── Density: N=Nominal (Level B)
-│    │   │   │ └────── Height: 0.55 mm
-│    │   │   └──────── Separator
-│    │   └──────────── Body width: 0.8 mm
-│    └──────────────── Body length: 1.6 mm
-└───────────────────── Prefix: Chip Resistor
+RESC 1608 X 055 N
+│    │    │ │   └── Density: N=Nominal (Level B)
+│    │    │ └────── Height: 0.55 mm (in hundredths of mm)
+│    │    └──────── Separator
+│    └───────────── Body: 1.6 × 0.8 mm (in tenths of mm: 16, 08)
+└────────────────── Prefix: Chip Resistor
 ```
+
+The body dimensions use tenths of mm with 2 digits each: 1.6mm → `16`, 0.8mm → `08`,
+concatenated to `1608`. This is the metric equivalent of the EIA 0603 size.
 
 **Prefixes:** RESC (resistor), CAPC (capacitor), CAPCP (cap polar), INDC (inductor),
 DIOC (diode)
@@ -493,13 +497,17 @@ The footprint name indicates which: `C` for collapsible, `N` for non-collapsible
 
 LandForge footprints can coexist with KiCad's stock library. You might use:
 
-- **LandForge** for standard passive components and ICs (consistent density levels)
-- **KiCad stock** for manufacturer-specific connectors, modules, and exotic packages
+- **LandForge** for standard JEDEC packages (consistent density levels, full
+  IPC-7351B traceability)
+- **KiCad stock** for manufacturer-specific connectors, modules, and packages
+  not covered by JEDEC/IPC standards
 
 There is no conflict -- they are separate libraries. However, be aware:
-- KiCad stock footprints are approximately Level B but without density level variants
+- KiCad stock footprints are approximately Level B but without density level
+  variants and without traceability to the IPC-7351B equations
 - KiCad's "HandSolder" variants are NOT the same as LandForge Level A
-  (HandSolder pads are informally enlarged; Level A is calculated per IPC equations)
+  (HandSolder pads are informally enlarged; Level A is calculated per IPC equations
+  with traceable fillet goals from the tolerance tables)
 
 ---
 
@@ -507,7 +515,7 @@ There is no conflict -- they are separate libraries. However, be aware:
 
 ### "Which footprint do I use for a generic 0805 resistor?"
 
-`RESC2012X55N` (Level B) -- or `M`/`L` variant depending on your density choice.
+`RESC2012X065N` (Level B) -- or `M`/`L` variant depending on your density choice.
 The "2012" means 2.0 x 1.2 mm metric, which is the 0805 EIA size.
 
 ### "The footprint names are hard to read. Can I search by 0805?"
@@ -541,10 +549,14 @@ includes the IPC-specified minimum clearance for the chosen density level.
 
 ### "What about components not in LandForge?"
 
-LandForge covers standard JEDEC/IPC package types. For manufacturer-specific
-packages (e.g., a particular Molex connector, or an Infineon DirectFET), use
-KiCad's stock library or create custom footprints from the manufacturer's
-datasheet.
+LandForge covers the standard JEDEC package sizes. If your component uses a
+standard package that isn't in the database yet, add its JEDEC dimensions
+(from the datasheet) to the appropriate CSV in `data/jedec/` and regenerate —
+the IPC equations will calculate the correct land pattern automatically.
+
+For manufacturer-specific packages that don't follow JEDEC standards (e.g., a
+particular Molex connector, or an Infineon DirectFET), use KiCad's stock
+library or create custom footprints from the manufacturer's datasheet.
 
 ### "Is Level B the same as KiCad's stock footprints?"
 

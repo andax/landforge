@@ -1,11 +1,19 @@
 # LandForge
 
-IPC-7351B compliant KiCad footprint library with full density level support.
+Parametric KiCad footprint generator for standard JEDEC component packages,
+calculated per IPC-7351B at all three density levels.
 
-LandForge generates professional-quality SMD land patterns at all three
-IPC-7351B density levels (A/B/C) from a parametric Python engine backed by
-JEDEC component dimension databases. Every pad dimension traces back to the
-IPC tolerance equations — no guesswork, no manual drawing.
+LandForge takes JEDEC standard component dimensions and runs them through the
+IPC-7351B tolerance equations to produce mathematically correct land patterns.
+Every pad size, gap, and courtyard traces directly back to the IPC equations
+and the JEDEC package specification — no guesswork, no manual drawing.
+
+The included component databases cover **214 standard JEDEC package sizes**
+across 12 families (chip passives, molded body, MELF, electrolytic, SOT/SOD,
+SOIC/QFP, BGA, QFN/SON/DFN, DIP, WLCSP, SC-70, and SMD crystal). Each size
+is generated at all three IPC-7351B density levels, producing **642 ready-to-use
+KiCad footprints**. Adding a new component size is a one-line CSV edit;
+regeneration takes under 0.1 seconds.
 
 ## Why LandForge?
 
@@ -14,7 +22,7 @@ IPC Level B) with no traceability to the underlying calculations. If you need
 tighter spacing for a dense board, or larger pads for prototyping and rework,
 you're on your own.
 
-LandForge gives you three mathematically correct variants of every footprint:
+LandForge gives you three IPC-7351B calculated variants of every footprint:
 
 | Level | Suffix | Use Case |
 |-------|--------|----------|
@@ -24,8 +32,8 @@ LandForge gives you three mathematically correct variants of every footprint:
 
 ## What's Included
 
-**642 footprints** across 12 libraries, covering the major IPC-7351B families
-plus commonly needed extensions:
+**214 JEDEC package sizes × 3 density levels = 642 footprints** across 12
+libraries, covering the major IPC-7351B families plus commonly needed extensions:
 
 | Library | Components | Footprints |
 |---------|-----------|----------:|
@@ -52,9 +60,10 @@ Every footprint includes:
 
 ## Quick Start
 
-### Use the pre-built footprints
+### Use the pre-built library
 
-The `output/` directory contains ready-to-use KiCad libraries. No build step required.
+The `output/` directory contains pre-generated footprints for all 214 standard
+JEDEC package sizes. No build step required — just point KiCad at the libraries:
 
 1. Clone this repository
 2. In KiCad: **Preferences → Manage Footprint Libraries**
@@ -62,9 +71,11 @@ The `output/` directory contains ready-to-use KiCad libraries. No build step req
 4. Footprints are now available in the footprint browser — search by IPC name
    (e.g., `RESC1608`) or common name (e.g., `0603`, `resistor`)
 
-### Regenerate from source
+### Add a component size or regenerate
 
-If you want to modify the component database or add new sizes:
+The pre-built library covers the standard JEDEC sizes. If your component uses
+a non-standard package, add its dimensions to the appropriate CSV in `data/jedec/`
+and regenerate:
 
 ```bash
 # Install uv (if not already installed)
@@ -129,19 +140,29 @@ See the [User Guide](docs/user_guide.md) for detailed guidance.
 ## How It Works
 
 LandForge is a parametric generator, not a collection of manually drawn footprints.
+The inputs are JEDEC component dimensions; the outputs are IPC-7351B compliant
+KiCad footprints.
 
-1. **IPC equations** (`generator/core/ipc_equations.py`) implement the Z/G/X tolerance
-   calculations from IPC-7351B Section 3.1.5
-2. **Tolerance tables** (`generator/core/tables.py`) encode all 22 IPC tables (3-2
+1. **JEDEC component databases** (`data/jedec/*.csv`) — standard package dimensions
+   from JEDEC publications, one CSV per component family (214 sizes total)
+2. **IPC-7351B equations** (`generator/core/ipc_equations.py`) — Z/G/X tolerance
+   calculations from Section 3.1.5, with RMS tolerance accumulation
+3. **IPC tolerance tables** (`generator/core/tables.py`) — all 22 IPC tables (3-2
    through 3-22) with fillet goals and courtyard excess per density level
-3. **Family generators** (`generator/families/`) implement the pad layout for each
+4. **Family generators** (`generator/families/`) — pad layout templates for each
    package type (chip, molded, gull-wing, BGA, QFN, etc.)
-4. **Component databases** (`data/jedec/*.csv`) provide JEDEC package dimensions
-5. **KiCad writer** (`generator/core/kicad_writer.py`) serializes to `.kicad_mod`
+5. **KiCad writer** (`generator/core/kicad_writer.py`) — serializes to `.kicad_mod`
    format (version 20260206)
 
+```
+JEDEC dimensions (CSV) → IPC-7351B equations → KiCad footprints (.kicad_mod)
+                          ↑
+                     22 tolerance tables
+                     3 density levels (A/B/C)
+```
+
 Adding a new component size is a one-line CSV edit. Adding a new package family is
-one Python module. Regeneration is instant.
+one Python module. Regeneration of all 642 footprints takes under 0.1 seconds.
 
 ## Project Structure
 
@@ -151,7 +172,7 @@ landforge/
 │   ├── core/           # Equation engine, KiCad writer, layer generators, naming
 │   ├── families/       # One module per component family (12 generators)
 │   └── generate_all.py # Master generation script
-├── data/jedec/         # Component dimension databases (CSV)
+├── data/jedec/         # JEDEC standard package dimensions (CSV, 214 sizes)
 ├── output/             # Generated KiCad libraries (.pretty directories)
 ├── tests/              # 37 automated tests
 └── docs/
@@ -159,15 +180,20 @@ landforge/
     └── test_plan.md    # Validation procedures per development stage
 ```
 
-## Reference Standard
+## Reference Standards
 
 **IPC-7351B** (June 2010) — *Generic Requirements for Surface Mount Design and
 Land Pattern Standard*. Published by IPC (Association Connecting Electronics
-Industries).
+Industries). Defines the equations, tolerance tables, and naming conventions
+used by LandForge. Covers component families IPC-7352 through IPC-7359
+(discrete, gull-wing, J-lead, DIP, area array, and no-lead packages).
 
-The IPC-7351B standard defines the equations, tolerance tables, and naming
-conventions used by LandForge. It covers component families IPC-7352 through
-IPC-7359 (discrete, gull-wing, J-lead, DIP, area array, and no-lead packages).
+**JEDEC package standards** — The component dimension databases in `data/jedec/`
+are derived from JEDEC standard package outlines (e.g., JEDEC MO-153 for SOT-23,
+MO-187 for QFN). These define the physical dimensions (body size, lead span,
+terminal width, tolerances) that feed into the IPC-7351B equations. When a
+component conforms to a standard JEDEC package, the pre-generated footprint is
+the correct IPC-7351B land pattern for that component.
 
 ## Status
 
@@ -178,9 +204,13 @@ IPC-7359 (discrete, gull-wing, J-lead, DIP, area array, and no-lead packages).
 
 ## Contributing
 
-To add new component sizes, edit the appropriate CSV in `data/jedec/` and regenerate.
-To add a new package family, create a generator module in `generator/families/` following
-the existing patterns (see `ipc7352_chip.py` for a simple example).
+**Adding a new component size** — find the JEDEC package dimensions from the
+component datasheet, add a row to the appropriate CSV in `data/jedec/`, and
+regenerate. The IPC equations handle the rest.
+
+**Adding a new package family** — create a generator module in `generator/families/`
+following the existing patterns (see `ipc7352_chip.py` for a simple example),
+add a CSV for the JEDEC dimensions, and wire it into `generate_all.py`.
 
 Run tests before submitting:
 

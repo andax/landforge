@@ -182,7 +182,7 @@ All 7 tests must pass.
    - Place it at coordinates (50, 50)
 
 3. Place the LandForge Level B footprint:
-   - Place > Footprint > Browse to `output/test_validation/RESC1.60.8X055N.kicad_mod`
+   - Place > Footprint > Browse to `output/test_validation/RESC1608X055N.kicad_mod`
    - Place it at coordinates (60, 50) (10mm to the right)
 
 4. **Measure and compare pads** (use KiCad Measure tool or pad properties):
@@ -286,7 +286,7 @@ verifies all generated chip footprints have valid dimensions.
    density levels side by side. Verify A is visually largest, C smallest.
 
 7. **Cross-reference one footprint against KiCad stock:**
-   - Pick `RESC3216X55N` (1206 Level B)
+   - Pick `RESC3216X065N` (1206 Level B)
    - Compare against KiCad's `R_1206_3216Metric`
    - Pad dimensions should be within ±20%
 
@@ -351,7 +351,7 @@ works, and at least one cross-reference against stock is within tolerance.
 
 **Procedure:**
 
-1. Generate and place `SOT95P240X110-3N` (SOT-23)
+1. Generate and place `SOT095P240X110-3N` (SOT-23)
 
 2. Place KiCad stock `SOT-23` next to it
 
@@ -460,7 +460,7 @@ works, and at least one cross-reference against stock is within tolerance.
 
 **Procedure:**
 
-1. Generate `QFN50P500X500X100-33T340N` (QFN-32 + thermal pad)
+1. Generate `QFN050P500X500X090-32T340N` (QFN-32 + thermal pad)
 
 2. Compare with KiCad stock QFN-32 of similar size
 
@@ -525,9 +525,9 @@ Quick visual check -- these are lower priority families.
 **Procedure:**
 
 1. Pick 5 footprints that should have stock model mappings:
-   - RESC1608X55N (should map to R_0603_1608Metric.step)
+   - RESC1608X055N (should map to R_0603_1608Metric.step)
    - SOIC127P600X175-8N (should map to SOIC-8_3.9x4.9mm.step)
-   - SOT95P240X110-3N (should map to SOT-23.step)
+   - SOT095P240X110-3N (should map to SOT-23.step)
    - A QFP variant
    - A DIP variant
 

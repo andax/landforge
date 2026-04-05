@@ -21,7 +21,7 @@ class TestSerializeFootprint:
     def test_two_terminal_chip(self):
         """Test a simple 2-pad chip component."""
         fp = Footprint(
-            name="RESC1608X55N",
+            name="RESC1608X055N",
             description="Chip resistor 0603",
             tags="resistor chip 0603 1608",
         )
