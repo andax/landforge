@@ -15,16 +15,26 @@ and **manual validation** procedures to be performed in KiCad.
 
 ### How to Load LandForge Footprints in KiCad
 
-1. Open KiCad > Preferences > Manage Footprint Libraries
-2. Click "Add existing library to table" (folder icon)
+**Add a library (recommended):**
+
+1. Open KiCad > **Preferences > Manage Footprint Libraries...**
+2. Click the folder icon ("Add existing library to table")
 3. Navigate to `landforge/output/IPC7351B_Chip.pretty/` (or whichever library)
 4. Set nickname (e.g., "IPC7351B_Chip")
-5. The footprints are now available in the footprint browser and PCB editor
+5. The footprints are now available when placing footprints (press **A** in PCB Editor)
 
-Alternatively, place a single `.kicad_mod` file directly:
-1. Open PCB editor
-2. Place > Footprint > Browse...
-3. Navigate to the `.kicad_mod` file directly
+**Inspect a single .kicad_mod file:**
+
+1. Open the **Footprint Editor** (from the KiCad main window or PCB Editor toolbar)
+2. **File > Import > Import Footprint...**
+3. Navigate to the `.kicad_mod` file
+
+**Place a footprint in the PCB Editor:**
+
+1. Press **A** (or **Place > Add Footprint**)
+2. Click on the board — the Footprint Chooser dialog opens
+3. Type to search (e.g., `RESC1608` or `0603`)
+4. Select the footprint and click OK, then click to place
 
 ---
 
@@ -128,13 +138,16 @@ All 8 tests must pass.
    "
    ```
 
-2. Open KiCad 10 > PCB Editor
+2. Add `output/test_validation/` as a library:
+   **Preferences > Manage Footprint Libraries...** > folder icon >
+   navigate to `output/test_validation/`
 
-3. Place > Footprint > Browse to `output/test_validation/`
+3. Open KiCad 10 > PCB Editor
 
-4. Open each of the 3 generated files (M, N, L variants)
+4. Press **A** (Add Footprint), click the board, search for `RESC1608` in
+   the Footprint Chooser. Place each of the 3 variants (M, N, L).
 
-5. **Check: No parse errors** -- KiCad must open each file without warnings or errors
+5. **Check: No parse errors** -- KiCad must load each footprint without warnings or errors
 
 6. **Check: Visual inspection** -- the footprint should render with:
    - Two pads (rounded rectangles)
@@ -177,15 +190,18 @@ All 7 tests must pass.
 
 1. Open KiCad PCB Editor, create a new empty board
 
-2. Place the KiCad stock footprint:
-   - Place > Footprint > search "R_0603_1608Metric"
+2. Ensure both KiCad stock libraries and `output/test_validation/` are registered
+   (see "How to Load" above)
+
+3. Place the KiCad stock footprint:
+   - Press **A**, click the board, search for `R_0603_1608Metric` in the chooser
    - Place it at coordinates (50, 50)
 
-3. Place the LandForge Level B footprint:
-   - Place > Footprint > Browse to `output/test_validation/RESC1608X055N.kicad_mod`
+4. Place the LandForge Level B footprint:
+   - Press **A**, click the board, search for `RESC1608X055N`
    - Place it at coordinates (60, 50) (10mm to the right)
 
-4. **Measure and compare pads** (use KiCad Measure tool or pad properties):
+5. **Measure and compare pads** (use KiCad Measure tool or pad properties):
 
    | Property | KiCad Stock | LandForge Level B | Acceptable Range |
    |----------|------------|-------------------|-----------------|
@@ -194,20 +210,20 @@ All 7 tests must pass.
    | Pad center X | ±0.775 mm | ? | ±0.6 to ±1.0 mm |
    | Pad shape | Rounded rect | Rounded rect | Must match |
 
-5. **Measure and compare courtyard:**
+6. **Measure and compare courtyard:**
 
    | Property | KiCad Stock | LandForge Level B | Note |
    |----------|------------|-------------------|------|
    | Width | 2.96 mm | ? | Should be similar |
    | Height | 1.46 mm | ? | Should be similar |
 
-6. **Compare all 3 density levels visually:**
+7. **Compare all 3 density levels visually:**
    - Place Level A, B, C next to each other (spaced 5mm apart)
    - **Check:** Level A should visually have the largest pads and courtyard
    - **Check:** Level C should have the smallest
    - **Check:** All three should have the same body outline on F.Fab
 
-7. **Screenshot** the comparison and save as `docs/validation/stage_a_comparison.png`
+8. **Screenshot** the comparison and save as `docs/validation/stage_a_comparison.png`
 
 **Pass criteria:**
 - Level B pad dimensions are within ±20% of KiCad stock values
@@ -222,7 +238,7 @@ All 7 tests must pass.
 
 1. With the board from step above still open
 
-2. Run Inspect > Design Rules Check
+2. Run **Inspect > Design Rules Checker**
 
 3. **Check:** No errors related to the LandForge footprints
    (Board-level DRC errors about missing netlist are expected and can be ignored)
@@ -303,7 +319,7 @@ works, and at least one cross-reference against stock is within tolerance.
 
 2. Add copper zones and a board outline
 
-3. Generate Gerber files (File > Fabrication Outputs > Gerbers)
+3. Generate Gerber files (**File > Fabrication Outputs > Gerbers (.gbr)**)
 
 4. Open Gerbers in a viewer (KiCad's built-in Gerber viewer or gerbv)
 
