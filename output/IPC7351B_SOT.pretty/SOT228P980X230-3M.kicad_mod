@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level A DPAK-TO252-3. Table 3-14. Z=11.35 G=5.50 X=1.05. Courtyard excess=0.50mm.")
 	(tags "SOT228P980X230-3M dpak-to252-3 IPC7351B density_A")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -4.3 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "SOT228P980X230-3M"
-		(at 0 1.5 0)
+		(at 0 4.3 0)
 		(layer "F.Fab")
 		(effects
 			(font

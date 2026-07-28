@@ -11,6 +11,8 @@ from .ipc_equations import ToleranceTable, FilletGoals, CourtyardExcess
 
 # Table 3-2: Flat Ribbon L and Gull-Wing Leads (pitch > 0.625 mm)
 # Applies to: SOIC, SOP (>0.625mm), QFP (>0.625mm), SOT, SOD
+# Note 1 (verified against printed page): where S_min <= A_max use
+# reduced heel goals 0.25/0.15/0.05; Note 2 exempts T1 tolerance > 0.5.
 TABLE_3_2 = ToleranceTable(
     name="3-2",
     description="Flat ribbon L and gull-wing leads, pitch > 0.625 mm",
@@ -18,10 +20,12 @@ TABLE_3_2 = ToleranceTable(
     fillet_B=FilletGoals(toe=0.35, heel=0.35, side=0.03),
     fillet_C=FilletGoals(toe=0.15, heel=0.25, side=0.01),
     courtyard=CourtyardExcess(A=0.50, B=0.25, C=0.10),
+    note1_heel=(0.25, 0.15, 0.05),
 )
 
 # Table 3-3: Flat Ribbon L and Gull-Wing Leads (pitch <= 0.625 mm)
 # Applies to: SOP fine pitch, QFP fine pitch, SSOP, TSSOP, MSOP
+# Same Note 1 / Note 2 as Table 3-2 (verified against printed page).
 TABLE_3_3 = ToleranceTable(
     name="3-3",
     description="Flat ribbon L and gull-wing leads, pitch <= 0.625 mm",
@@ -29,6 +33,7 @@ TABLE_3_3 = ToleranceTable(
     fillet_B=FilletGoals(toe=0.35, heel=0.35, side=-0.02),
     fillet_C=FilletGoals(toe=0.15, heel=0.25, side=-0.04),
     courtyard=CourtyardExcess(A=0.50, B=0.25, C=0.10),
+    note1_heel=(0.25, 0.15, 0.05),
 )
 
 # Table 3-4: J Leads
@@ -134,13 +139,18 @@ TABLE_3_12 = ToleranceTable(
 
 # Table 3-13: Inward Flat Ribbon L-Leads (Molded Inductors, Diodes, Polarized Caps)
 # Applies to: CAPMP, INDM, DIOM, RESM, FUSM, LEDM
-# Note: toe and heel are SWAPPED vs gull-wing: toe=inner(G), heel=outer(Z)
+# The printed table labels its rows "Toe (to find G dim)" = 0.25/0.15/0.07
+# and "Heel (to find Z dim)" = 0.80/0.50/0.20 (verified against the
+# printed page, not just OCR). calculate_land_pattern always drives Z
+# from the toe field and G from the heel field, so -- exactly like the
+# reversed Tables 3-4 and 3-8 -- the values are stored PRE-SWAPPED here:
+# toe field holds the standard's Z-driving heel value and vice versa.
 TABLE_3_13 = ToleranceTable(
     name="3-13",
     description="Inward flat ribbon L-leads (molded body)",
-    fillet_A=FilletGoals(toe=0.25, heel=0.80, side=0.01),
-    fillet_B=FilletGoals(toe=0.15, heel=0.50, side=-0.05),
-    fillet_C=FilletGoals(toe=0.07, heel=0.20, side=-0.10),
+    fillet_A=FilletGoals(toe=0.80, heel=0.25, side=0.01),
+    fillet_B=FilletGoals(toe=0.50, heel=0.15, side=-0.05),
+    fillet_C=FilletGoals(toe=0.20, heel=0.07, side=-0.10),
     courtyard=CourtyardExcess(A=0.50, B=0.25, C=0.10),
 )
 

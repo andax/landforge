@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level B QFN-16, 0.5mm pitch, 3.0x3.0mm body. Table 3-15. Z=3.85 G=2.10 X=0.25. Courtyard excess=0.25mm.")
 	(tags "QFN050P300X300X090-16T150N qfn 16pin 0.5mm IPC7351B density_B")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -2.95 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "QFN050P300X300X090-16T150N"
-		(at 0 1.5 0)
+		(at 0 2.95 0)
 		(layer "F.Fab")
 		(effects
 			(font

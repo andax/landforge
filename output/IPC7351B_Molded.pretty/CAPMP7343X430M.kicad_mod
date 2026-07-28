@@ -2,10 +2,10 @@
 	(version 20260206)
 	(generator "landforge")
 	(layer "F.Cu")
-	(descr "IPC-7351B Level A Molded Capacitor (Polar) EIA-7343-43 (7343 Metric). Table 3-13. Z=8.05 G=3.60 X=2.55. Courtyard excess=0.50mm.")
+	(descr "IPC-7351B Level A Molded Capacitor (Polar) EIA-7343-43 (7343 Metric). Table 3-13. Z=9.15 G=4.70 X=2.55. Courtyard excess=0.50mm.")
 	(tags "CAPMP7343X430M molded capacitor (polar) EIA-7343-43 7343 IPC7351B density_A")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -3.4 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "CAPMP7343X430M"
-		(at 0 1.5 0)
+		(at 0 3.4 0)
 		(layer "F.Fab")
 		(effects
 			(font
@@ -132,8 +132,8 @@
 		(layer "F.SilkS")
 	)
 	(fp_rect
-		(start -4.55 -2.65)
-		(end 4.55 2.65)
+		(start -5.1 -2.65)
+		(end 5.1 2.65)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -152,13 +152,13 @@
 		)
 	)
 	(pad "1" smd roundrect
-		(at -2.9125 0.0)
+		(at -3.4625 0.0)
 		(size 2.225 2.55)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.25)
 	)
 	(pad "2" smd roundrect
-		(at 2.9125 0.0)
+		(at 3.4625 0.0)
 		(size 2.225 2.55)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.25)

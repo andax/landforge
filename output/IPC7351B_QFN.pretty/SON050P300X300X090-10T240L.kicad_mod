@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level C SON-10, 0.5mm pitch, 3.0x3.0mm body. Table 3-16. Z=3.65 G=2.10 X=0.25. Courtyard excess=0.10mm.")
 	(tags "SON050P300X300X090-10T240L son 10pin 0.5mm IPC7351B density_C")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -2.35 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "SON050P300X300X090-10T240L"
-		(at 0 1.5 0)
+		(at 0 2.35 0)
 		(layer "F.Fab")
 		(effects
 			(font

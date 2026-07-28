@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level C Chip Resistor 0508 (1220 Metric). Table 3-6. Z=1.62 G=0.44 X=2.12. Courtyard excess=0.10mm.")
 	(tags "RESC1220X055L chip resistor chip 0508 1220 IPC7351B density_C")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -1.95 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "RESC1220X055L"
-		(at 0 1.5 0)
+		(at 0 1.95 0)
 		(layer "F.Fab")
 		(effects
 			(font

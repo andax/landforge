@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level B Chip Resistor 0815 (2038 Metric). Table 3-5. Z=2.95 G=0.90 X=4.05. Courtyard excess=0.25mm.")
 	(tags "RESC2038X065N chip resistor chip 0815 2038 IPC7351B density_B")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -3.05 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "RESC2038X065N"
-		(at 0 1.5 0)
+		(at 0 3.05 0)
 		(layer "F.Fab")
 		(effects
 			(font

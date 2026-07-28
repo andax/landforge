@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level A Chip Resistor 1225 (3264 Metric). Table 3-5. Z=4.55 G=2.00 X=6.75. Courtyard excess=0.50mm.")
 	(tags "RESC3264X065M chip resistor chip 1225 3264 IPC7351B density_A")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -4.65 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "RESC3264X065M"
-		(at 0 1.5 0)
+		(at 0 4.65 0)
 		(layer "F.Fab")
 		(effects
 			(font

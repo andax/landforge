@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level B Chip Resistor 1020 (2550 Metric). Table 3-5. Z=3.45 G=1.40 X=5.25. Courtyard excess=0.25mm.")
 	(tags "RESC2550X065N chip resistor chip 1020 2550 IPC7351B density_B")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -3.65 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "RESC2550X065N"
-		(at 0 1.5 0)
+		(at 0 3.65 0)
 		(layer "F.Fab")
 		(effects
 			(font

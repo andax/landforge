@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level C SOT-883. Table 3-16. Z=1.50 G=0.25 X=0.25. Courtyard excess=0.10mm.")
 	(tags "SOT035P100X050-3L sot-883 IPC7351B density_C")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -1.35 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "SOT035P100X050-3L"
-		(at 0 1.5 0)
+		(at 0 1.35 0)
 		(layer "F.Fab")
 		(effects
 			(font

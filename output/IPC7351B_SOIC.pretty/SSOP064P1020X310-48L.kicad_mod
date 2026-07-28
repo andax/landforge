@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level C SSOP-48, 0.635mm pitch. Table 3-2. Z=10.95 G=7.25 X=0.45. Courtyard excess=0.10mm.")
 	(tags "SSOP064P1020X310-48L ssop 48pin 0.635mm IPC7351B density_C")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -8.8 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "SSOP064P1020X310-48L"
-		(at 0 1.5 0)
+		(at 0 8.8 0)
 		(layer "F.Fab")
 		(effects
 			(font

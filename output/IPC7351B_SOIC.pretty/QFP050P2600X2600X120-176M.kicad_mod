@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level A QFP-176, 0.5mm pitch. Table 3-3. Z=27.55 G=23.70 X=0.35. Courtyard excess=0.50mm.")
 	(tags "QFP050P2600X2600X120-176M qfp 176pin 0.5mm IPC7351B density_A")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -15.05 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "QFP050P2600X2600X120-176M"
-		(at 0 1.5 0)
+		(at 0 15.05 0)
 		(layer "F.Fab")
 		(effects
 			(font

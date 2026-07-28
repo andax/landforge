@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level B SOT-223. Table 3-2. Z=7.85 G=3.60 X=1.00. Courtyard excess=0.25mm.")
 	(tags "SOT230P670X180-4N sot-223 IPC7351B density_B")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -4.25 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "SOT230P670X180-4N"
-		(at 0 1.5 0)
+		(at 0 4.25 0)
 		(layer "F.Fab")
 		(effects
 			(font

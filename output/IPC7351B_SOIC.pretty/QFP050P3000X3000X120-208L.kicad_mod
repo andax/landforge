@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level C QFP-208, 0.5mm pitch. Table 3-3. Z=30.75 G=28.10 X=0.25. Courtyard excess=0.10mm.")
 	(tags "QFP050P3000X3000X120-208L qfp 208pin 0.5mm IPC7351B density_C")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -16.25 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "QFP050P3000X3000X120-208L"
-		(at 0 1.5 0)
+		(at 0 16.25 0)
 		(layer "F.Fab")
 		(effects
 			(font

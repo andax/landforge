@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level B DFN-6, 0.65mm pitch, 2.0x2.0mm body. Table 3-18. Z=2.25 G=1.10 X=0.40. Courtyard excess=0.25mm.")
 	(tags "DFN065P200X200X090-6T120N dfn 6pin 0.65mm IPC7351B density_B")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -2.0 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "DFN065P200X200X090-6T120N"
-		(at 0 1.5 0)
+		(at 0 2.0 0)
 		(layer "F.Fab")
 		(effects
 			(font

@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level B Chip Inductor 0402 (1005 Metric). Table 3-6. Z=1.52 G=0.30 X=0.62. Courtyard excess=0.15mm.")
 	(tags "INDC1005X050N chip inductor chip 0402 1005 IPC7351B density_B")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -1.25 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "INDC1005X050N"
-		(at 0 1.5 0)
+		(at 0 1.25 0)
 		(layer "F.Fab")
 		(effects
 			(font

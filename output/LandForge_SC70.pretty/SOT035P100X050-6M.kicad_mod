@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level A SOT-963. Table 3-16. Z=1.90 G=0.35 X=0.20. Courtyard excess=0.50mm.")
 	(tags "SOT035P100X050-6M sot-963 IPC7351B density_A")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -1.75 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "SOT035P100X050-6M"
-		(at 0 1.5 0)
+		(at 0 1.75 0)
 		(layer "F.Fab")
 		(effects
 			(font

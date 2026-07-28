@@ -2,10 +2,10 @@
 	(version 20260206)
 	(generator "landforge")
 	(layer "F.Cu")
-	(descr "IPC-7351B Level B Molded Fuse 0603 (1608 Metric). Table 3-13. Z=2.15 G=-0.30 X=0.75. Courtyard excess=0.25mm.")
+	(descr "IPC-7351B Level B Molded Fuse 0603 (1608 Metric). Table 3-13. Z=2.85 G=0.40 X=0.75. Courtyard excess=0.25mm.")
 	(tags "FUSM1608X080N molded fuse 0603 1608 IPC7351B density_B")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -1.4 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "FUSM1608X080N"
-		(at 0 1.5 0)
+		(at 0 1.4 0)
 		(layer "F.Fab")
 		(effects
 			(font
@@ -78,8 +78,8 @@
 		(layer "F.SilkS")
 	)
 	(fp_rect
-		(start -1.35 -0.65)
-		(end 1.35 0.65)
+		(start -1.7 -0.65)
+		(end 1.7 0.65)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -108,13 +108,13 @@
 		)
 	)
 	(pad "1" smd roundrect
-		(at -0.4625 0.0)
+		(at -0.8125 0.0)
 		(size 1.225 0.75)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.25)
 	)
 	(pad "2" smd roundrect
-		(at 0.4625 0.0)
+		(at 0.8125 0.0)
 		(size 1.225 0.75)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.25)

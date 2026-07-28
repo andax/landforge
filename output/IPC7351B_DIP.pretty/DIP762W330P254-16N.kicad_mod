@@ -5,7 +5,7 @@
 	(descr "Level B DIP-16, 7.62mm row spacing. IPC-2221/7251 THT lands: hole=1.00 pad=1.60. Courtyard excess=0.25mm.")
 	(tags "DIP762W330P254-16N dip 16pin through_hole IPC7351B density_B")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -10.7 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "DIP762W330P254-16N"
-		(at 0 1.5 0)
+		(at 0 10.7 0)
 		(layer "F.Fab")
 		(effects
 			(font

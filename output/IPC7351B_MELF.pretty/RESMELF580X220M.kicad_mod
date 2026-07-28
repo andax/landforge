@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level A MELF Resistor MELF-MMB-0207. Table 3-7. Z=7.25 G=3.80 X=2.65. Courtyard excess=0.50mm.")
 	(tags "RESMELF580X220M melf resistor melf IPC7351B density_A")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -2.6 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "RESMELF580X220M"
-		(at 0 1.5 0)
+		(at 0 2.6 0)
 		(layer "F.Fab")
 		(effects
 			(font

@@ -5,7 +5,7 @@
 	(descr "Level C DIP-40, 15.24mm row spacing. IPC-2221/7251 THT lands: hole=0.95 pad=1.45. Courtyard excess=0.10mm.")
 	(tags "DIP1524W457P254-40L dip 40pin through_hole IPC7351B density_C")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -26.9 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "DIP1524W457P254-40L"
-		(at 0 1.5 0)
+		(at 0 26.9 0)
 		(layer "F.Fab")
 		(effects
 			(font

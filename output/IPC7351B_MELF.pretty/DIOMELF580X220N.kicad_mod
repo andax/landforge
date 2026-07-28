@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level B MELF Diode MELF-MMB-0207. Table 3-7. Z=6.85 G=4.00 X=2.55. Courtyard excess=0.25mm.")
 	(tags "DIOMELF580X220N melf diode melf IPC7351B density_B")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -2.3 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "DIOMELF580X220N"
-		(at 0 1.5 0)
+		(at 0 2.3 0)
 		(layer "F.Fab")
 		(effects
 			(font

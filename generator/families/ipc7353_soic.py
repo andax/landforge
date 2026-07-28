@@ -201,7 +201,12 @@ def generate_gullwing_ic(spec: GullwingICSpec, level: DensityLevel) -> Footprint
     """Generate a gull-wing IC footprint (2-side or 4-side)."""
     table = spec.table
     comp = spec.to_ipc_dims().to_component_dimensions()
-    lp = calculate_land_pattern(comp, table, level)
+    # body_A/lead_tol feed the Tables 3-2/3-3 Note 1 reduced-heel check
+    # (SOIC-class parts are exempt via Note 2: lead tolerance > 0.5 mm)
+    lp = calculate_land_pattern(
+        comp, table, level,
+        body_A=spec.body_width, lead_tol=spec.T_max - spec.T_min,
+    )
 
     ipc_name = _ipc_name(spec, level)
     excess = table.courtyard_excess(level)

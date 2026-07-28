@@ -139,6 +139,19 @@ def serialize_footprint(fp: Footprint) -> str:
 
     attr = "smd" if fp.smd else "through_hole"
 
+    # Place Reference above and Value below the courtyard so the default
+    # silkscreen text never lands on copper (text is 1.0 mm tall; 0.75
+    # clears half the text plus a margin). Fall back to +/-1.5 when no
+    # courtyard rectangle exists.
+    crtyd_rects = [r for r in fp.rects if r.layer == "F.CrtYd"]
+    if crtyd_rects:
+        cy_top = min(min(r.y1, r.y2) for r in crtyd_rects)
+        cy_bottom = max(max(r.y1, r.y2) for r in crtyd_rects)
+        ref_y = cy_top - 0.75
+        val_y = cy_bottom + 0.75
+    else:
+        ref_y, val_y = -1.5, 1.5
+
     w(f'(footprint "{fp.name}"')
     w(f"\t(version 20260206)")
     w(f'\t(generator "landforge")')
@@ -154,7 +167,7 @@ def serialize_footprint(fp: Footprint) -> str:
 
     # Properties
     w(f'\t(property "Reference" "REF**"')
-    w(f"\t\t(at 0 -1.5 0)")
+    w(f"\t\t(at 0 {_fmt(ref_y)} 0)")
     w(f'\t\t(layer "F.SilkS")')
     w(f"\t\t(effects")
     w(f"\t\t\t(font")
@@ -165,7 +178,7 @@ def serialize_footprint(fp: Footprint) -> str:
     w(f"\t)")
 
     w(f'\t(property "Value" "{fp.name}"')
-    w(f"\t\t(at 0 1.5 0)")
+    w(f"\t\t(at 0 {_fmt(val_y)} 0)")
     w(f'\t\t(layer "F.Fab")')
     w(f"\t\t(effects")
     w(f"\t\t\t(font")

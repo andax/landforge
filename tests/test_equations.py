@@ -202,12 +202,16 @@ class TestMoldedBodyCalculation:
     """Test molded body (CAPMP, DIOM) using Table 3-13."""
 
     def test_table_3_13_reversed_toe_heel(self):
-        """Table 3-13 has toe for inner (G) and heel for outer (Z).
+        """Table 3-13 labels toe as the G-driver and heel as the Z-driver.
 
-        The heel value (outer) should be larger than toe (inner).
+        calculate_land_pattern always drives Z from the toe field, so the
+        values are stored PRE-SWAPPED (like Tables 3-4 and 3-8): the toe
+        field holds the standard's larger Z-driving value.
         """
-        # Level B: heel=0.50 (outer), toe=0.15 (inner)
-        assert TABLE_3_13.fillet_B.heel > TABLE_3_13.fillet_B.toe
+        # Level B: standard heel-for-Z 0.50 lives in the toe field
+        assert TABLE_3_13.fillet_B.toe == 0.50
+        assert TABLE_3_13.fillet_B.heel == 0.15
+        assert TABLE_3_13.fillet_B.toe > TABLE_3_13.fillet_B.heel
 
 
 class TestQFNCalculation:

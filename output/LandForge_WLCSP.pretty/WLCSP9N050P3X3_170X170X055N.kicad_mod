@@ -2,10 +2,10 @@
 	(version 20260206)
 	(generator "landforge")
 	(layer "F.Cu")
-	(descr "IPC-7351B Level B WLCSP-9, 0.5mm pitch, 3x3 grid. Non-collapsible bumps. Land dia=0.250mm. Courtyard excess=1.00mm.")
+	(descr "IPC-7351B Level B WLCSP-9, 0.5mm pitch, 3x3 grid. Non-collapsible bumps. Land dia=0.280mm. Courtyard excess=1.00mm.")
 	(tags "WLCSP9N050P3X3_170X170X055N wlcsp csp wafer-level 9pin 0.5mm IPC7351B density_B")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -2.6 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "WLCSP9N050P3X3_170X170X055N"
-		(at 0 1.5 0)
+		(at 0 2.6 0)
 		(layer "F.Fab")
 		(effects
 			(font
@@ -115,55 +115,55 @@
 	)
 	(pad "A1" smd circle
 		(at -0.5 -0.5)
-		(size 0.25 0.25)
+		(size 0.28 0.28)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
 	(pad "A2" smd circle
 		(at 0.0 -0.5)
-		(size 0.25 0.25)
+		(size 0.28 0.28)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
 	(pad "A3" smd circle
 		(at 0.5 -0.5)
-		(size 0.25 0.25)
+		(size 0.28 0.28)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
 	(pad "B1" smd circle
 		(at -0.5 0.0)
-		(size 0.25 0.25)
+		(size 0.28 0.28)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
 	(pad "B2" smd circle
 		(at 0.0 0.0)
-		(size 0.25 0.25)
+		(size 0.28 0.28)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
 	(pad "B3" smd circle
 		(at 0.5 0.0)
-		(size 0.25 0.25)
+		(size 0.28 0.28)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
 	(pad "C1" smd circle
 		(at -0.5 0.5)
-		(size 0.25 0.25)
+		(size 0.28 0.28)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
 	(pad "C2" smd circle
 		(at 0.0 0.5)
-		(size 0.25 0.25)
+		(size 0.28 0.28)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
 	(pad "C3" smd circle
 		(at 0.5 0.5)
-		(size 0.25 0.25)
+		(size 0.28 0.28)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)

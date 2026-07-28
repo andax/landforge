@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level B TSSOP-28, 0.65mm pitch. Table 3-2. Z=7.35 G=4.20 X=0.40. Courtyard excess=0.25mm.")
 	(tags "TSSOP065P640X120-28N tssop 28pin 0.65mm IPC7351B density_B")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -5.85 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "TSSOP065P640X120-28N"
-		(at 0 1.5 0)
+		(at 0 5.85 0)
 		(layer "F.Fab")
 		(effects
 			(font

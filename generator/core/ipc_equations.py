@@ -57,6 +57,10 @@ class ToleranceTable:
     fillet_C: FilletGoals
     courtyard: CourtyardExcess
     roundoff: float = 0.05  # mm, default rounding increment
+    # Tables 3-2/3-3 Note 1: reduced heel goals (A, B, C) for gull-wing
+    # components whose inner lead distance S_min is <= body dimension A_max.
+    # Note 2 exempts components whose lead length tolerance T1 > 0.5 mm.
+    note1_heel: tuple[float, float, float] | None = None
 
     def fillet(self, level: DensityLevel) -> FilletGoals:
         """Get fillet goals for a density level."""
@@ -225,6 +229,9 @@ def calculate_land_pattern(
     level: DensityLevel,
     fab_tol: float = 0.05,
     place_tol: float = 0.05,
+    body_A: float | None = None,
+    lead_tol: float | None = None,
+    allow_negative_g: bool = False,
 ) -> LandPatternResult:
     """Calculate land pattern dimensions using IPC-7351B equations.
 
@@ -233,18 +240,47 @@ def calculate_land_pattern(
       G_min = S_max - 2*J_H - sqrt(CS^2 + F^2 + P^2)
       X_max = W_min + 2*J_S + sqrt(CW^2 + F^2 + P^2)
 
+    Tables 3-2/3-3 Note 1: when the caller supplies the body dimension A
+    (body_A) and the table defines note1_heel, gull-wing components whose
+    inner lead distance S_min <= A use the reduced heel goals
+    (0.25/0.15/0.05 for A/B/C). Note 2 exempts components whose lead
+    length tolerance T1 (lead_tol) is greater than 0.5 mm.
+
     Args:
         comp: Component dimensions with min/max tolerances.
         table: IPC tolerance table for this component family.
         level: Density level (A, B, or C).
         fab_tol: Fabrication tolerance F (default 0.05 mm).
         place_tol: Placement tolerance P (default 0.05 mm).
+        body_A: Body dimension A for the Note 1 check (gull-wing only).
+        lead_tol: Lead length tolerance T1 for the Note 2 exemption.
 
     Returns:
         LandPatternResult with Z, G, X dimensions rounded per IPC rules.
+
+    Raises:
+        ValueError: if the resulting G is not positive -- overlapping
+        pads are always a data or table error, never a valid pattern.
+        Callers computing a single-sided land from a synthetic symmetric
+        pattern (e.g. DPAK thermal tabs, where only (Z-G)/2 is used and
+        the pad legitimately crosses the center) pass
+        allow_negative_g=True to skip the check.
     """
     fillet = table.fillet(level)
     r = table.roundoff
+
+    heel = fillet.heel
+    if (
+        table.note1_heel is not None
+        and body_A is not None
+        and comp.S_min <= body_A
+        and (lead_tol is None or lead_tol <= 0.5)
+    ):
+        heel = {
+            DensityLevel.A: table.note1_heel[0],
+            DensityLevel.B: table.note1_heel[1],
+            DensityLevel.C: table.note1_heel[2],
+        }[level]
 
     # Tolerance RSS (root sum of squares) terms
     rss_L = math.sqrt(comp.CL**2 + fab_tol**2 + place_tol**2)
@@ -253,13 +289,20 @@ def calculate_land_pattern(
 
     # Core equations
     Z_raw = comp.L_min + 2 * fillet.toe + rss_L
-    G_raw = comp.S_max - 2 * fillet.heel - rss_S
+    G_raw = comp.S_max - 2 * heel - rss_S
     X_raw = comp.W_min + 2 * fillet.side + rss_W
 
     # Round per IPC rules: Z and X round up, G rounds down
     Z = round_to(Z_raw, r)
     G = round_down_to(G_raw, r)
     X = round_to(X_raw, r)
+
+    if G <= 0 and not allow_negative_g:
+        raise ValueError(
+            f"land pattern G={G:.2f} <= 0 for table {table.name} level "
+            f"{level.name} (L {comp.L_min}-{comp.L_max}, S {comp.S_min:.2f}"
+            f"-{comp.S_max:.2f}): pads would overlap; check component data"
+        )
 
     return LandPatternResult(Z=Z, G=G, X=X)
 
@@ -310,29 +353,27 @@ def calculate_bga_land_diameter(
 ) -> float:
     """Calculate BGA land pad diameter per IPC-7351B Table 3-17.
 
-    For collapsible balls: land = ball_diameter * (1 - reduction%)
-    For non-collapsible: land = ball_diameter * (1 + increase%)
+    Table 3-17 (verified against the printed page): the percentage
+    depends on the density level only.
+      Collapsing balls:     reduce nominal ball diameter by
+                            25% / 20% / 15% for levels A / B / C.
+      Non-collapsing balls: increase nominal ball or column diameter by
+                            15% / 10% / 5% for levels A / B / C.
 
-    The percentage depends on density level and ball size.
+    Rounded to the nearest 0.01 mm ("nearest two place decimal"): the
+    published land approximations in Tables 14-5/14-6 (e.g. 0.28, 0.33,
+    0.21) are two-decimal values, not multiples of 0.05. Note that
+    Tables 14-5/14-6 grade their percentages by ball size instead of
+    density level; this library follows the Section 3 density system,
+    which coincides with 14-5/14-6 at Level B for 0.25-0.50 mm balls.
     """
     if collapsible:
-        # Table 14-5: reduction percentages for collapsible balls
-        if ball_diameter >= 0.65:
-            pct = {DensityLevel.A: 0.25, DensityLevel.B: 0.20, DensityLevel.C: 0.15}
-        elif ball_diameter >= 0.35:
-            pct = {DensityLevel.A: 0.20, DensityLevel.B: 0.15, DensityLevel.C: 0.10}
-        else:
-            pct = {DensityLevel.A: 0.15, DensityLevel.B: 0.10, DensityLevel.C: 0.05}
-        return round_to(ball_diameter * (1 - pct[level]), 0.05)
+        pct = {DensityLevel.A: -0.25, DensityLevel.B: -0.20,
+               DensityLevel.C: -0.15}
     else:
-        # Table 14-6: increase percentages for non-collapsible balls
-        if ball_diameter >= 0.55:
-            pct = {DensityLevel.A: 0.15, DensityLevel.B: 0.10, DensityLevel.C: 0.05}
-        elif ball_diameter >= 0.30:
-            pct = {DensityLevel.A: 0.10, DensityLevel.B: 0.05, DensityLevel.C: 0.00}
-        else:
-            pct = {DensityLevel.A: 0.05, DensityLevel.B: 0.00, DensityLevel.C: -0.05}
-        return round_to(ball_diameter * (1 + pct[level]), 0.05)
+        pct = {DensityLevel.A: 0.15, DensityLevel.B: 0.10,
+               DensityLevel.C: 0.05}
+    return round(ball_diameter * (1 + pct[level]), 2)
 
 
 def calculate_periphery_land(

@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level C Chip Inductor 0603 (1608 Metric). Table 3-5. Z=2.05 G=0.80 X=0.85. Courtyard excess=0.10mm.")
 	(tags "INDC1608X080L chip inductor chip 0603 1608 IPC7351B density_C")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -1.3 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "INDC1608X080L"
-		(at 0 1.5 0)
+		(at 0 1.3 0)
 		(layer "F.Fab")
 		(effects
 			(font

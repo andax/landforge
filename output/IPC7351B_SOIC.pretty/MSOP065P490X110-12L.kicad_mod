@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level C MSOP-12, 0.65mm pitch. Table 3-2. Z=5.45 G=2.80 X=0.45. Courtyard excess=0.10mm.")
 	(tags "MSOP065P490X110-12L msop 12pin 0.65mm IPC7351B density_C")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -2.9 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "MSOP065P490X110-12L"
-		(at 0 1.5 0)
+		(at 0 2.9 0)
 		(layer "F.Fab")
 		(effects
 			(font

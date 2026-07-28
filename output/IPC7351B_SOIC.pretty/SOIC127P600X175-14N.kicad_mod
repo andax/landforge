@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level B SOIC-14, 1.27mm pitch. Table 3-2. Z=6.95 G=2.95 X=0.60. Courtyard excess=0.25mm.")
 	(tags "SOIC127P600X175-14N soic 14pin 1.27mm IPC7351B density_B")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -5.35 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "SOIC127P600X175-14N"
-		(at 0 1.5 0)
+		(at 0 5.35 0)
 		(layer "F.Fab")
 		(effects
 			(font

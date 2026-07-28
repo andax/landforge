@@ -180,9 +180,18 @@ will be generated programmatically from pitch and pin count (not listed in CSV).
 
 ## Current Status
 
-**Stage A:** Complete (core engine, 47 tests passing)
+**Stage A:** Complete (core engine, 61 tests passing)
 **Stage B:** B1-B5, B7-B8, B10-B13 complete. B6 (SOJ/PLCC) and B9 (LCC) deferred.
-**Total footprints:** 642 across 12 libraries, generated in 0.08 seconds
+**Total footprints:** 633 across 12 libraries, generated in 0.09 seconds
+
+**Multi-agent review (2026-07-28):** 16 confirmed defects in 8 root causes,
+all fixed same day and verified against rendered IPC-7351B PDF pages --
+see docs/validation/ultracode_review_findings.md. Key engine rules now in
+place: Table 3-13 stored pre-swapped (Z-driver in toe field, like 3-4/3-8);
+Tables 3-2/3-3 Note 1 reduced heel (S_min <= body A, T1 tol <= 0.5) via
+calculate_land_pattern(body_A=, lead_tol=); BGA lands per Table 3-17
+density percentages; negative G raises; Reference/Value text placed
+outside the courtyard. Shipped-output invariants in tests/test_invariants.py.
 
 **Stage B validation:** Automated stock comparison in place
 (`uv run python -m generator.stock_compare`, needs local KiCad stock libraries at

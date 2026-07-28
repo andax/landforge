@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level B Chip Resistor 0201 (0603 Metric). Table 3-6. Z=1.12 G=0.20 X=0.40. Courtyard excess=0.15mm.")
 	(tags "RESC0603X023N chip resistor chip 0201 0603 IPC7351B density_B")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -1.1 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "RESC0603X023N"
-		(at 0 1.5 0)
+		(at 0 1.1 0)
 		(layer "F.Fab")
 		(effects
 			(font

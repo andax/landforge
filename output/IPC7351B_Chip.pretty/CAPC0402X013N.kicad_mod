@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level B Chip Capacitor 01005 (0402 Metric). Table 3-6. Z=0.88 G=0.12 X=0.28. Courtyard excess=0.15mm.")
 	(tags "CAPC0402X013N chip capacitor chip 01005 0402 IPC7351B density_B")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -1.05 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "CAPC0402X013N"
-		(at 0 1.5 0)
+		(at 0 1.05 0)
 		(layer "F.Fab")
 		(effects
 			(font

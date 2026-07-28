@@ -2,10 +2,10 @@
 	(version 20260206)
 	(generator "landforge")
 	(layer "F.Cu")
-	(descr "IPC-7351B Level B Molded Inductor 0805 (2012 Metric). Table 3-13. Z=2.55 G=-0.20 X=1.20. Courtyard excess=0.25mm.")
+	(descr "IPC-7351B Level B Molded Inductor 0805 (2012 Metric). Table 3-13. Z=3.25 G=0.50 X=1.20. Courtyard excess=0.25mm.")
 	(tags "INDM2012X125N molded inductor 0805 2012 IPC7351B density_B")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -1.65 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "INDM2012X125N"
-		(at 0 1.5 0)
+		(at 0 1.65 0)
 		(layer "F.Fab")
 		(effects
 			(font
@@ -78,8 +78,8 @@
 		(layer "F.SilkS")
 	)
 	(fp_rect
-		(start -1.55 -0.9)
-		(end 1.55 0.9)
+		(start -1.9 -0.9)
+		(end 1.9 0.9)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -108,13 +108,13 @@
 		)
 	)
 	(pad "1" smd roundrect
-		(at -0.5875 0.0)
+		(at -0.9375 0.0)
 		(size 1.375 1.2)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.25)
 	)
 	(pad "2" smd roundrect
-		(at 0.5875 0.0)
+		(at 0.9375 0.0)
 		(size 1.375 1.2)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.25)

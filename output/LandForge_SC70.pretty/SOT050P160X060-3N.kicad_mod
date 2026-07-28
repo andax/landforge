@@ -2,10 +2,10 @@
 	(version 20260206)
 	(generator "landforge")
 	(layer "F.Cu")
-	(descr "IPC-7351B Level B SOT-523. Table 3-2. Z=2.65 G=-0.05 X=0.40. Courtyard excess=0.25mm.")
+	(descr "IPC-7351B Level B SOT-523. Table 3-2. Z=2.65 G=0.35 X=0.40. Courtyard excess=0.25mm.")
 	(tags "SOT050P160X060-3N sot-523 IPC7351B density_B")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -1.8 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "SOT050P160X060-3N"
-		(at 0 1.5 0)
+		(at 0 1.8 0)
 		(layer "F.Fab")
 		(effects
 			(font
@@ -153,20 +153,20 @@
 		)
 	)
 	(pad "1" smd roundrect
-		(at -0.65 -0.5)
-		(size 1.35 0.4)
+		(at -0.75 -0.5)
+		(size 1.15 0.4)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.25)
 	)
 	(pad "2" smd roundrect
-		(at -0.65 0.5)
-		(size 1.35 0.4)
+		(at -0.75 0.5)
+		(size 1.15 0.4)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.25)
 	)
 	(pad "3" smd roundrect
-		(at 0.65 0.0)
-		(size 1.35 0.4)
+		(at 0.75 0.0)
+		(size 1.15 0.4)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.25)
 	)

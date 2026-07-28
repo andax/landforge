@@ -24,7 +24,9 @@ from generator.core.kicad_writer import (
     Footprint, Pad, PadShape, PadType,
     write_footprint,
 )
-from generator.core.layers import add_courtyard, add_fab_body, add_silk_chip
+from generator.core.layers import (
+    add_courtyard, add_fab_body, add_polarity_mark, add_silk_chip,
+)
 
 
 @dataclass
@@ -103,40 +105,57 @@ def generate_crystal_footprint(spec: CrystalSpec, level: DensityLevel) -> Footpr
         cy_y = max(spec.body_length, lp.X) + 2 * excess
 
     else:  # 4-pin
-        # 4 pads in rectangular pattern
-        # Pins: 1=bottom-left, 2=bottom-right, 3=top-right, 4=top-left (CCW from BL)
-        # Or more standard: 1=top-left, 2=bottom-left, 3=bottom-right, 4=top-right
+        # 4 pads in rectangular pattern. Device convention for 4-pad SMD
+        # crystals/oscillators (Epson TSX, Abracon, ECS, ...): pin 1 at
+        # bottom-left, numbered CCW with pins 1-2 adjacent along the long
+        # body edge: 1=BL, 2=BR, 3=TR, 4=TL. KiCad +Y is down, so
+        # bottom-left is (-pad_cx, +py). IC-style top-left numbering is
+        # NOT rotation-equivalent on this rectangular grid and would
+        # cross-connect every pin of a standard oscillator pinout.
         py = spec.pin_pitch_y / 2
+
+        # Physical clearance: the IPC X goal may exceed the vertical pin
+        # pitch on tiny 4-pad crystals (e.g. 1210 at Level A). Clamp the
+        # pad height so vertically adjacent pads keep >= 0.15 mm gap.
+        pad_height = min(lp.pad_width, spec.pin_pitch_y - 0.15)
 
         fp.pads.append(Pad(
             number="1", pad_type=PadType.SMD, shape=PadShape.ROUNDRECT,
-            x=-pad_cx, y=-py,
-            width=lp.pad_length, height=lp.pad_width,
+            x=-pad_cx, y=py,
+            width=lp.pad_length, height=pad_height,
             layers=["F.Cu", "F.Mask", "F.Paste"],
         ))
         fp.pads.append(Pad(
             number="2", pad_type=PadType.SMD, shape=PadShape.ROUNDRECT,
-            x=-pad_cx, y=py,
-            width=lp.pad_length, height=lp.pad_width,
+            x=pad_cx, y=py,
+            width=lp.pad_length, height=pad_height,
             layers=["F.Cu", "F.Mask", "F.Paste"],
         ))
         fp.pads.append(Pad(
             number="3", pad_type=PadType.SMD, shape=PadShape.ROUNDRECT,
-            x=pad_cx, y=py,
-            width=lp.pad_length, height=lp.pad_width,
+            x=pad_cx, y=-py,
+            width=lp.pad_length, height=pad_height,
             layers=["F.Cu", "F.Mask", "F.Paste"],
         ))
         fp.pads.append(Pad(
             number="4", pad_type=PadType.SMD, shape=PadShape.ROUNDRECT,
-            x=pad_cx, y=-py,
-            width=lp.pad_length, height=lp.pad_width,
+            x=-pad_cx, y=-py,
+            width=lp.pad_length, height=pad_height,
             layers=["F.Cu", "F.Mask", "F.Paste"],
         ))
         cy_x = max(spec.body_width, lp.Z) + 2 * excess
-        cy_y = max(spec.body_length, spec.pin_pitch_y + lp.pad_width) + 2 * excess
+        cy_y = max(spec.body_length, spec.pin_pitch_y + pad_height) + 2 * excess
 
     add_courtyard(fp, cy_x, cy_y)
-    add_fab_body(fp, spec.body_width, spec.body_length, pin1_chamfer=0.3)
+    if spec.pins == 4:
+        # Pin 1 is at bottom-left (device convention); the default
+        # top-left chamfer would mark the wrong corner, so use a
+        # polarity dot at the pin 1 corner instead. KiCad +Y is down.
+        add_fab_body(fp, spec.body_width, spec.body_length)
+        add_polarity_mark(fp, -spec.body_width / 2 + 0.3,
+                          spec.body_length / 2 - 0.3)
+    else:
+        add_fab_body(fp, spec.body_width, spec.body_length)
 
     if spec.pins == 2:
         pad_x_extent = pad_cx + lp.pad_length / 2

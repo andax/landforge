@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level A MELF Resistor MiniMELF-MMA-0204. Table 3-7. Z=5.05 G=1.90 X=1.85. Courtyard excess=0.50mm.")
 	(tags "RESMELF360X140M melf resistor melf IPC7351B density_A")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -2.2 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "RESMELF360X140M"
-		(at 0 1.5 0)
+		(at 0 2.2 0)
 		(layer "F.Fab")
 		(effects
 			(font

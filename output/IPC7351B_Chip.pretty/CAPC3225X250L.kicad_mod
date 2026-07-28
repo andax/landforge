@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level C Chip Capacitor 1210 (3225 Metric). Table 3-5. Z=3.75 G=2.00 X=2.65. Courtyard excess=0.10mm.")
 	(tags "CAPC3225X250L chip capacitor chip 1210 3225 IPC7351B density_C")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -2.2 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "CAPC3225X250L"
-		(at 0 1.5 0)
+		(at 0 2.2 0)
 		(layer "F.Fab")
 		(effects
 			(font

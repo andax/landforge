@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level A SSOP-8, 0.65mm pitch. Table 3-2. Z=6.75 G=2.00 X=0.50. Courtyard excess=0.50mm.")
 	(tags "SSOP065P530X175-8M ssop 8pin 0.65mm IPC7351B density_A")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -2.75 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "SSOP065P530X175-8M"
-		(at 0 1.5 0)
+		(at 0 2.75 0)
 		(layer "F.Fab")
 		(effects
 			(font

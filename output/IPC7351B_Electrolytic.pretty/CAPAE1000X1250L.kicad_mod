@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level C Aluminum Electrolytic Capacitor 10.0x12.5mm. Table 3-20L. Z=11.45 G=3.65 X=2.15. Courtyard excess=0.25mm.")
 	(tags "CAPAE1000X1250L electrolytic capacitor aluminum capae 10.0mm IPC7351B density_C")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -6.0 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "CAPAE1000X1250L"
-		(at 0 1.5 0)
+		(at 0 6.0 0)
 		(layer "F.Fab")
 		(effects
 			(font

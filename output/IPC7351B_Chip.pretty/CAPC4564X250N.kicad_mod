@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level B Chip Capacitor 1825 (4564 Metric). Table 3-5. Z=5.45 G=3.30 X=6.65. Courtyard excess=0.25mm.")
 	(tags "CAPC4564X250N chip capacitor chip 1825 4564 IPC7351B density_B")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -4.35 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "CAPC4564X250N"
-		(at 0 1.5 0)
+		(at 0 4.35 0)
 		(layer "F.Fab")
 		(effects
 			(font

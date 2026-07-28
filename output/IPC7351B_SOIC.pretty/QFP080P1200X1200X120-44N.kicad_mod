@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level B QFP-44, 0.8mm pitch. Table 3-2. Z=13.15 G=9.60 X=0.55. Courtyard excess=0.25mm.")
 	(tags "QFP080P1200X1200X120-44N qfp 44pin 0.8mm IPC7351B density_B")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -7.6 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "QFP080P1200X1200X120-44N"
-		(at 0 1.5 0)
+		(at 0 7.6 0)
 		(layer "F.Fab")
 		(effects
 			(font

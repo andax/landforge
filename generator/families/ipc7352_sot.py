@@ -111,13 +111,21 @@ def generate_sot_footprint(spec: SotSpec, level: DensityLevel) -> Footprint:
     """Generate a multi-pin SOT/SOD/DPAK footprint."""
     table = spec.get_table()
     comp = spec.to_ipc_dims().to_component_dimensions()
-    lp = calculate_land_pattern(comp, table, level)
+    # body_A/lead_tol feed the Tables 3-2/3-3 Note 1 reduced-heel check
+    lp = calculate_land_pattern(
+        comp, table, level,
+        body_A=spec.body_width, lead_tol=spec.T_max - spec.T_min,
+    )
 
     # Tab land: same span and fillet goals, tab contact dimensions
     lp_tab = None
     if spec.has_thermal_tab:
         tab_comp = spec.to_tab_ipc_dims().to_component_dimensions()
-        lp_tab = calculate_land_pattern(tab_comp, table, level)
+        lp_tab = calculate_land_pattern(
+            tab_comp, table, level,
+            body_A=spec.body_width, lead_tol=spec.tab_T_max - spec.tab_T_min,
+            allow_negative_g=True,  # single-sided land; only (Z-G)/2 used
+        )
 
     ipc_name = _sot_ipc_name(spec, level)
 

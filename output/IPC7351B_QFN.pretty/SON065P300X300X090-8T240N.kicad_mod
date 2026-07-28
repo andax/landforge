@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level B SON-8, 0.65mm pitch, 3.0x3.0mm body. Table 3-16. Z=3.85 G=2.10 X=0.30. Courtyard excess=0.25mm.")
 	(tags "SON065P300X300X090-8T240N son 8pin 0.65mm IPC7351B density_B")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -2.5 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "SON065P300X300X090-8T240N"
-		(at 0 1.5 0)
+		(at 0 2.5 0)
 		(layer "F.Fab")
 		(effects
 			(font

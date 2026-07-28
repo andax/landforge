@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level B QFN-20, 0.5mm pitch, 4.0x4.0mm body. Table 3-15. Z=4.85 G=3.10 X=0.25. Courtyard excess=0.25mm.")
 	(tags "QFN050P400X400X090-20T250N qfn 20pin 0.5mm IPC7351B density_B")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -3.45 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "QFN050P400X400X090-20T250N"
-		(at 0 1.5 0)
+		(at 0 3.45 0)
 		(layer "F.Fab")
 		(effects
 			(font

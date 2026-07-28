@@ -7,13 +7,14 @@ Generates footprints for components with inward-bent L-shaped flat leads:
 
 Uses Table 3-13: Inward Flat Ribbon L-Leads.
 
-IMPORTANT: Table 3-13 reverses toe/heel vs gull-wing:
-  - Heel fillet (J_H) applies to the OUTER (Z) dimension (larger value)
-  - Toe fillet (J_T) applies to the INNER (G) dimension (smaller value)
-  The standard calculate_land_pattern function handles this correctly because
-  Table 3-13 already has the values in the right fields:
-    fillet.toe=0.25/0.15/0.07 (small, for inner gap)
-    fillet.heel=0.80/0.50/0.20 (large, for outer span)
+IMPORTANT: Table 3-13 reverses toe/heel vs gull-wing: the standard's
+heel value drives the OUTER (Z) dimension and its toe value drives the
+INNER (G) dimension. calculate_land_pattern always computes Z from the
+toe field and G from the heel field, so TABLE_3_13 stores the values
+PRE-SWAPPED (toe field = 0.80/0.50/0.20 Z-driver, heel field =
+0.25/0.15/0.07 G-driver), exactly like the reversed Tables 3-4 and 3-8.
+See the table definition in core/tables.py for the printed-page
+verification note.
 
 KiCad orientation: body long axis along X, pads at ±X.
 """

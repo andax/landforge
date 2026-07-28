@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level C Chip Capacitor 0805 (2012 Metric). Table 3-5. Z=2.55 G=0.90 X=1.40. Courtyard excess=0.10mm.")
 	(tags "CAPC2012X125L chip capacitor chip 0805 2012 IPC7351B density_C")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -1.55 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "CAPC2012X125L"
-		(at 0 1.5 0)
+		(at 0 1.55 0)
 		(layer "F.Fab")
 		(effects
 			(font

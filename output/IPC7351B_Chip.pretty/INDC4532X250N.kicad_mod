@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level B Chip Inductor 1812 (4532 Metric). Table 3-5. Z=5.45 G=3.30 X=3.45. Courtyard excess=0.25mm.")
 	(tags "INDC4532X250N chip inductor chip 1812 4532 IPC7351B density_B")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -2.75 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "INDC4532X250N"
-		(at 0 1.5 0)
+		(at 0 2.75 0)
 		(layer "F.Fab")
 		(effects
 			(font

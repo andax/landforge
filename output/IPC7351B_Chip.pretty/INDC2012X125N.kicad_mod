@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level B Chip Inductor 0805 (2012 Metric). Table 3-5. Z=2.95 G=0.90 X=1.50. Courtyard excess=0.25mm.")
 	(tags "INDC2012X125N chip inductor chip 0805 2012 IPC7351B density_B")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -1.75 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "INDC2012X125N"
-		(at 0 1.5 0)
+		(at 0 1.75 0)
 		(layer "F.Fab")
 		(effects
 			(font

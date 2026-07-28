@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level A Chip Capacitor 1808 (4520 Metric). Table 3-5. Z=5.85 G=3.30 X=2.35. Courtyard excess=0.50mm.")
 	(tags "CAPC4520X200M chip capacitor chip 1808 4520 IPC7351B density_A")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -2.45 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "CAPC4520X200M"
-		(at 0 1.5 0)
+		(at 0 2.45 0)
 		(layer "F.Fab")
 		(effects
 			(font

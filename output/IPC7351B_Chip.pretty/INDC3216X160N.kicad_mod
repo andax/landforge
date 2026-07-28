@@ -5,7 +5,7 @@
 	(descr "IPC-7351B Level B Chip Inductor 1206 (3216 Metric). Table 3-5. Z=4.15 G=2.00 X=1.85. Courtyard excess=0.25mm.")
 	(tags "INDC3216X160N chip inductor chip 1206 3216 IPC7351B density_B")
 	(property "Reference" "REF**"
-		(at 0 -1.5 0)
+		(at 0 -1.95 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "INDC3216X160N"
-		(at 0 1.5 0)
+		(at 0 1.95 0)
 		(layer "F.Fab")
 		(effects
 			(font
