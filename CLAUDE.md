@@ -40,13 +40,13 @@ landforge/
 │   └── kicad_stock_map.csv      # Curated IPC-name <-> KiCad-stock-name pairs
 ├── data/jedec/                  # Component dimension databases (CSV)
 │   ├── chip_components.csv      # 45 chip sizes (RESC/CAPC/CAPCP/INDC/DIOC)
-│   ├── molded_components.csv    # 23 molded body sizes
+│   ├── molded_components.csv    # 20 molded body sizes
 │   ├── melf_components.csv      # 6 MELF sizes
 │   ├── electrolytic_components.csv  # 14 electrolytic sizes
 │   └── sot_components.csv       # 11 SOT/SOD/DPAK packages with pin layouts
 ├── output/                      # Generated KiCad libraries (.pretty dirs)
 │   ├── IPC7351B_Chip.pretty/    # 135 footprints
-│   ├── IPC7351B_Molded.pretty/  # 69 footprints
+│   ├── IPC7351B_Molded.pretty/  # 60 footprints
 │   ├── IPC7351B_MELF.pretty/    # 18 footprints
 │   ├── IPC7351B_Electrolytic.pretty/  # 42 footprints
 │   └── IPC7351B_SOT.pretty/    # 33 footprints
@@ -55,7 +55,9 @@ landforge/
 │   ├── test_kicad_writer.py     # 8 tests: serialization, formatting
 │   ├── test_integration.py      # 7 tests: R_0603 at A/B/C, stock comparison
 │   ├── test_kicad_reader.py     # 8 tests: s-expr parsing, round-trip, stock formats
-│   └── test_stock_comparison.py # 2 tests: regression gate vs KiCad stock (KNOWN_OPEN baseline)
+│   ├── test_stock_comparison.py # 2 tests: regression gate vs KiCad stock (KNOWN_OPEN baseline)
+│   ├── test_paste.py            # 9 tests: thermal paste segmentation (3.1.5.7)
+│   └── test_invariants.py       # 5 tests: shipped-output invariants (all 633 footprints)
 ├── docs/
 │   ├── test_plan.md             # Stage-by-stage validation procedures
 │   ├── user_guide.md            # End-user guide for PCB designers
@@ -196,8 +198,8 @@ outside the courtyard. Shipped-output invariants in tests/test_invariants.py.
 **Stage B validation:** Automated stock comparison in place
 (`uv run python -m generator.stock_compare`, needs local KiCad stock libraries at
 `~/Applications/kicad-10/share/kicad/footprints`). Report:
-`docs/validation/stock_comparison_report.md`. 165 pairs compared: 76 OK,
-89 REVIEW (annotated vendor-pattern differences), 0 FAIL. All findings from the
+`docs/validation/stock_comparison_report.md`. 167 pairs compared: 81 OK,
+86 REVIEW (annotated vendor-pattern differences), 0 FAIL. All findings from the
 first baseline run were fixed against IPC-7351B: thermal tabs are now flat leads
 per Tables 3-2/3-14 (SOT-223/SOT-89/DPAK/D2PAK), CAPAE uses corrected terminal
 dims + fixed Table 3-20L fillets, DIP uses IPC-2221/7251 THT lands (Table 3-12
@@ -205,3 +207,20 @@ is butt-joint SMT, not THT), BGA ball rows follow JEDEC (skip I,O,Q,S), leadless
 SOT-883/963 use Table 3-16, CSV terminal data corrected (CAPMP7343, CAPC2220).
 `KNOWN_OPEN` in `tests/test_stock_comparison.py` is empty -- any new FAIL is a
 regression. Manual KiCad spot checks per docs/test_plan.md still pending.
+
+## Next Steps (agreed 2026-07-28)
+
+1. Manual KiCad validation to close Stage B: visual spot checks and Gerber
+   output verification per docs/test_plan.md (the automated half is done).
+2. Stage C: decide the 3D model path strategy first (stock reuse keeps
+   KICAD10_3DMODEL_DIR; own PCM-distributed models need KICAD10_3RD_PARTY --
+   see docs/kicad_alignment_review.md), then C1 stock-model mapping for the
+   remaining 11 libraries (reuse data/kicad_stock_map.csv), then CadQuery
+   STEP generation from the same JEDEC CSVs.
+3. Stage D pulled-forward items: PCM metadata.json + addon zip build,
+   CHANGELOG discipline on renames (names are a stable API), KLC-divergence
+   section in the user guide.
+4. Backlog: triage the 30 unverified minor findings from the 2026-07-28
+   multi-agent review (workflow transcript); optional paste-coverage config
+   knob and _ThermalVias variants; centralize version-pinned strings
+   (KICAD10_3DMODEL_DIR, format 20260206) before the KiCad v11 bump.

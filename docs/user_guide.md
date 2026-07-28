@@ -80,7 +80,7 @@ suffix letter in the footprint name (M, N, L).
 
 ```
 IPC7351B_Chip.pretty/          ← 45 chip sizes (R, C, L, D: 01005–2512)     135 fp
-IPC7351B_Molded.pretty/        ← 23 molded body sizes (tantalum, power)       69 fp
+IPC7351B_Molded.pretty/        ← 20 molded body sizes (tantalum, power)       60 fp
 IPC7351B_MELF.pretty/          ← 6 MELF cylindrical sizes                     18 fp
 IPC7351B_Electrolytic.pretty/  ← 14 electrolytic sizes (3–16mm diameter)       42 fp
 IPC7351B_SOT.pretty/           ← 11 SOT/SOD/DPAK packages                     33 fp
@@ -92,8 +92,11 @@ LandForge_WLCSP.pretty/       ← 12 WLCSP sizes                               3
 LandForge_SC70.pretty/         ← 13 SC-70 family sizes (SOT-323–SOT-963)      39 fp
 LandForge_Crystal.pretty/      ← 10 SMD crystal/oscillator sizes              30 fp
                                                                        ──────────
-                                 214 JEDEC sizes × 3 density levels  = 642 total
+                                 211 JEDEC sizes × 3 density levels  = 633 total
 ```
+
+Note: SOD-123/323/523 live in `IPC7351B_SOT.pretty` (they are gull-wing
+packages per IPC-7351B section 8.8), not in the molded library.
 
 ---
 
@@ -424,21 +427,26 @@ No manual adjustment is needed.
 
 ### 9.2 Fine-Pitch Pads (<=0.5mm)
 
-Fine-pitch pads may have slightly reduced paste apertures (90-95% of pad size)
-to prevent solder bridging. This is handled automatically by LandForge for
-applicable families.
+LandForge emits 1:1 paste on all signal pads, including fine pitch.
+Some assemblers prefer slightly reduced apertures (90-95% of pad size)
+on fine-pitch parts to prevent bridging -- that is a stencil-design
+decision best applied in your CAM/stencil tooling, not baked into the
+footprint library.
 
 ### 9.3 Thermal Pad Paste (Exposed Pads)
 
-Large exposed pads (QFN, DPAK, QFP-EP) have **segmented paste apertures** to
-prevent voiding during reflow. The IPC-7351B recommendation is:
+Large exposed pads and thermal tabs (QFN/SON/DFN, DPAK/D2PAK, SOT-89,
+SOT-223) have **segmented paste apertures** per IPC-7351B section
+3.1.5.7:
 
-- Total paste area = **40%** of exposed pad area
-- Divided into an NxN grid of smaller rectangles
-- Gaps between segments >= 0.25mm
+- Total paste area = **40%** of the thermal land area
+- A single centered aperture for lands 4.0 mm or smaller; a grid of
+  ceil(dimension / 4.0) cells per axis above that
+- Apertures are unnumbered paste-only pads; the copper pad itself
+  carries no paste layer
 
-This is built into every LandForge footprint with an exposed pad. You do not
-need to modify the paste layer manually.
+This is built into every LandForge footprint with a thermal pad. You do
+not need to modify the paste layer manually.
 
 ---
 

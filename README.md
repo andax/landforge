@@ -8,10 +8,10 @@ IPC-7351B tolerance equations to produce mathematically correct land patterns.
 Every pad size, gap, and courtyard traces directly back to the IPC equations
 and the JEDEC package specification — no guesswork, no manual drawing.
 
-The included component databases cover **214 standard JEDEC package sizes**
+The included component databases cover **211 standard JEDEC package sizes**
 across 12 families (chip passives, molded body, MELF, electrolytic, SOT/SOD,
 SOIC/QFP, BGA, QFN/SON/DFN, DIP, WLCSP, SC-70, and SMD crystal). Each size
-is generated at all three IPC-7351B density levels, producing **642 ready-to-use
+is generated at all three IPC-7351B density levels, producing **633 ready-to-use
 KiCad footprints**. Adding a new component size is a one-line CSV edit;
 regeneration takes under 0.1 seconds.
 
@@ -32,13 +32,13 @@ LandForge gives you three IPC-7351B calculated variants of every footprint:
 
 ## What's Included
 
-**214 JEDEC package sizes × 3 density levels = 642 footprints** across 12
+**211 JEDEC package sizes × 3 density levels = 633 footprints** across 12
 libraries, covering the major IPC-7351B families plus commonly needed extensions:
 
 | Library | Components | Footprints |
 |---------|-----------|----------:|
 | IPC7351B_Chip | Resistors, capacitors, inductors, diodes (01005–2512) | 135 |
-| IPC7351B_Molded | Tantalum caps, molded diodes/inductors/fuses/LEDs | 69 |
+| IPC7351B_Molded | Tantalum caps, molded diodes/inductors/fuses/LEDs | 60 |
 | IPC7351B_MELF | MELF resistors and diodes | 18 |
 | IPC7351B_Electrolytic | Aluminum electrolytic capacitors (3–16mm) | 42 |
 | IPC7351B_SOT | SOT-23/89/143/223, SOD-123/323/523, DPAK, D2PAK | 33 |
@@ -62,7 +62,7 @@ Every footprint includes:
 
 ### Use the pre-built library
 
-The `output/` directory contains pre-generated footprints for all 214 standard
+The `output/` directory contains pre-generated footprints for all 211 standard
 JEDEC package sizes. No build step required — just point KiCad at the libraries:
 
 1. Clone this repository
@@ -93,7 +93,7 @@ uv run pytest tests/ -v
 uv run python3 -m generator.generate_all
 ```
 
-Generation takes under 0.1 seconds for all 642 footprints.
+Generation takes under 0.1 seconds for all 633 footprints.
 
 ## Reading the Footprint Names
 
@@ -144,7 +144,7 @@ The inputs are JEDEC component dimensions; the outputs are IPC-7351B compliant
 KiCad footprints.
 
 1. **JEDEC component databases** (`data/jedec/*.csv`) — standard package dimensions
-   from JEDEC publications, one CSV per component family (214 sizes total)
+   from JEDEC publications, one CSV per component family (211 sizes total)
 2. **IPC-7351B equations** (`generator/core/ipc_equations.py`) — Z/G/X tolerance
    calculations from Section 3.1.5, with RMS tolerance accumulation
 3. **IPC tolerance tables** (`generator/core/tables.py`) — all 22 IPC tables (3-2
@@ -162,7 +162,7 @@ JEDEC dimensions (CSV) → IPC-7351B equations → KiCad footprints (.kicad_mod)
 ```
 
 Adding a new component size is a one-line CSV edit. Adding a new package family is
-one Python module. Regeneration of all 642 footprints takes under 0.1 seconds.
+one Python module. Regeneration of all 633 footprints takes under 0.1 seconds.
 
 ## Project Structure
 
@@ -172,12 +172,14 @@ landforge/
 │   ├── core/           # Equation engine, KiCad writer, layer generators, naming
 │   ├── families/       # One module per component family (12 generators)
 │   └── generate_all.py # Master generation script
-├── data/jedec/         # JEDEC standard package dimensions (CSV, 214 sizes)
+├── data/jedec/         # JEDEC standard package dimensions (CSV, 211 sizes)
 ├── output/             # Generated KiCad libraries (.pretty directories)
-├── tests/              # 37 automated tests
+├── tests/              # 61 automated tests (equations, invariants, stock comparison)
 └── docs/
     ├── user_guide.md   # End-user guide for PCB designers
-    └── test_plan.md    # Validation procedures per development stage
+    ├── test_plan.md    # Validation procedures per development stage
+    ├── kicad_alignment_review.md  # KiCad roadmap/ecosystem fit review
+    └── validation/     # Validation evidence (stock comparison, review findings)
 ```
 
 ## Reference Standards
@@ -189,18 +191,42 @@ used by LandForge. Covers component families IPC-7352 through IPC-7359
 (discrete, gull-wing, J-lead, DIP, area array, and no-lead packages).
 
 **JEDEC package standards** — The component dimension databases in `data/jedec/`
-are derived from JEDEC standard package outlines (e.g., JEDEC MO-153 for SOT-23,
-MO-187 for QFN). These define the physical dimensions (body size, lead span,
+are derived from JEDEC standard package outlines (e.g., TO-236 for SOT-23,
+MO-178 for SOT-23-5/6, MS-026 for LQFP, MO-220 for QFN, DO-214 for SMA/SMB/SMC). These define the physical dimensions (body size, lead span,
 terminal width, tolerances) that feed into the IPC-7351B equations. When a
 component conforms to a standard JEDEC package, the pre-generated footprint is
 the correct IPC-7351B land pattern for that component.
 
+## Validation
+
+The library is validated in three independent ways (evidence in `docs/validation/`):
+
+1. **Automated stock comparison** — every Level B footprint with a KiCad stock
+   counterpart (167 pairs) is compared for pad numbering, positions, sizes, and
+   courtyard: currently 81 match closely, 86 differ for documented reasons
+   (IPC vs vendor-derived patterns), 0 unexplained.
+2. **Shipped-output invariants** — every generated footprint is checked for
+   overlapping pads, positive pad gaps, silkscreen text clear of copper, and
+   density-level monotonicity on every regeneration.
+3. **Multi-agent adversarial review** (2026-07) — equations and all 22 tolerance
+   tables verified against the IPC-7351B text and rendered pages; all confirmed
+   findings fixed (see `docs/validation/ultracode_review_findings.md`).
+
+KiCad stock is used as a cross-check only; IPC-7351B is the source of truth.
+
 ## Status
 
-- **Stage A** (Foundation): Complete — equation engine, KiCad writer, 37 tests
-- **Stage B** (Footprints): Complete — 642 footprints across 12 libraries
-- **Stage C** (3D Models): Planned — parametric CadQuery STEP model generation
-- **Stage D** (QA/Release): Planned — DRC validation, Gerber verification, documentation
+- **Stage A** (Foundation): Complete — equation engine, KiCad writer
+- **Stage B** (Footprints): Code complete and machine-validated — 633 footprints
+  across 12 libraries, 61 tests; manual KiCad visual/Gerber spot checks remain
+- **Stage C** (3D Models): Next — stock STEP model mapping first, then
+  parametric CadQuery STEP generation from the same JEDEC databases
+- **Stage D** (QA/Release): Planned — KiCad PCM packaging (`metadata.json` +
+  addon zip), density selection guide, tagged releases with changelog
+
+See `docs/kicad_alignment_review.md` for how this roadmap tracks KiCad's own
+direction (data-generated footprints, STEP-only 3D, PCM distribution), and
+`CHANGELOG.md` for footprint renames — names are treated as a stable API.
 
 ## Contributing
 
