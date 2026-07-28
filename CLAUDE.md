@@ -24,6 +24,7 @@ landforge/
 │   │   ├── ipc_equations.py     # Z/G/X equations, RMS tolerance, BGA calc, rounding
 │   │   ├── tables.py            # All 22 IPC tolerance tables (3-2 through 3-22)
 │   │   ├── kicad_writer.py      # .kicad_mod serializer (format v20260206)
+│   │   ├── kicad_reader.py      # .kicad_mod parser (validation, golden tests)
 │   │   ├── layers.py            # Courtyard, silkscreen, fab layer generators
 │   │   └── naming.py            # IPC-7351B naming convention (Table 3-23)
 │   ├── families/                # One module per component family
@@ -32,7 +33,10 @@ landforge/
 │   │   ├── ipc7352_melf.py      # RESMELF, DIOMELF (Table 3-7)
 │   │   ├── ipc7352_capae.py     # CAPAE electrolytic (Table 3-20)
 │   │   └── ipc7352_sot.py       # SOT23/89/143/223, SOD, DPAK/D2PAK (Tables 3-2, 3-14)
-│   └── generate_all.py          # Master generation script
+│   ├── generate_all.py          # Master generation script
+│   └── stock_compare.py         # Level B vs KiCad stock comparison (validation)
+├── data/
+│   └── kicad_stock_map.csv      # Curated IPC-name <-> KiCad-stock-name pairs
 ├── data/jedec/                  # Component dimension databases (CSV)
 │   ├── chip_components.csv      # 45 chip sizes (RESC/CAPC/CAPCP/INDC/DIOC)
 │   ├── molded_components.csv    # 23 molded body sizes
@@ -48,10 +52,13 @@ landforge/
 ├── tests/
 │   ├── test_equations.py        # 22 tests: equations, tables, rounding, BGA
 │   ├── test_kicad_writer.py     # 8 tests: serialization, formatting
-│   └── test_integration.py      # 7 tests: R_0603 at A/B/C, stock comparison
+│   ├── test_integration.py      # 7 tests: R_0603 at A/B/C, stock comparison
+│   ├── test_kicad_reader.py     # 8 tests: s-expr parsing, round-trip, stock formats
+│   └── test_stock_comparison.py # 2 tests: regression gate vs KiCad stock (KNOWN_OPEN baseline)
 ├── docs/
 │   ├── test_plan.md             # Stage-by-stage validation procedures
-│   └── user_guide.md            # End-user guide for PCB designers
+│   ├── user_guide.md            # End-user guide for PCB designers
+│   └── validation/              # Validation evidence (stage A png, stock comparison report)
 └── pyproject.toml               # uv project config
 ```
 
@@ -170,6 +177,19 @@ will be generated programmatically from pitch and pin count (not listed in CSV).
 
 ## Current Status
 
-**Stage A:** Complete (core engine, 37 tests passing)
+**Stage A:** Complete (core engine, 47 tests passing)
 **Stage B:** B1-B5, B7-B8, B10-B13 complete. B6 (SOJ/PLCC) and B9 (LCC) deferred.
 **Total footprints:** 642 across 12 libraries, generated in 0.08 seconds
+
+**Stage B validation:** Automated stock comparison in place
+(`uv run python -m generator.stock_compare`, needs local KiCad stock libraries at
+`~/Applications/kicad-10/share/kicad/footprints`). Report:
+`docs/validation/stock_comparison_report.md`. 165 pairs compared: 76 OK,
+89 REVIEW (annotated vendor-pattern differences), 0 FAIL. All findings from the
+first baseline run were fixed against IPC-7351B: thermal tabs are now flat leads
+per Tables 3-2/3-14 (SOT-223/SOT-89/DPAK/D2PAK), CAPAE uses corrected terminal
+dims + fixed Table 3-20L fillets, DIP uses IPC-2221/7251 THT lands (Table 3-12
+is butt-joint SMT, not THT), BGA ball rows follow JEDEC (skip I,O,Q,S), leadless
+SOT-883/963 use Table 3-16, CSV terminal data corrected (CAPMP7343, CAPC2220).
+`KNOWN_OPEN` in `tests/test_stock_comparison.py` is empty -- any new FAIL is a
+regression. Manual KiCad spot checks per docs/test_plan.md still pending.

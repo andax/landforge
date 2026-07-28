@@ -2054,1057 +2054,1057 @@
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q1" smd circle
+	(pad "R1" smd circle
 		(at -5.25 1.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q2" smd circle
+	(pad "R2" smd circle
 		(at -4.75 1.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q3" smd circle
+	(pad "R3" smd circle
 		(at -4.25 1.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q4" smd circle
+	(pad "R4" smd circle
 		(at -3.75 1.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q5" smd circle
+	(pad "R5" smd circle
 		(at -3.25 1.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q6" smd circle
+	(pad "R6" smd circle
 		(at -2.75 1.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q7" smd circle
+	(pad "R7" smd circle
 		(at -2.25 1.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q8" smd circle
+	(pad "R8" smd circle
 		(at -1.75 1.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q9" smd circle
+	(pad "R9" smd circle
 		(at -1.25 1.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q10" smd circle
+	(pad "R10" smd circle
 		(at -0.75 1.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q11" smd circle
+	(pad "R11" smd circle
 		(at -0.25 1.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q12" smd circle
+	(pad "R12" smd circle
 		(at 0.25 1.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q13" smd circle
+	(pad "R13" smd circle
 		(at 0.75 1.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q14" smd circle
+	(pad "R14" smd circle
 		(at 1.25 1.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q15" smd circle
+	(pad "R15" smd circle
 		(at 1.75 1.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q16" smd circle
+	(pad "R16" smd circle
 		(at 2.25 1.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q17" smd circle
+	(pad "R17" smd circle
 		(at 2.75 1.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q18" smd circle
+	(pad "R18" smd circle
 		(at 3.25 1.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q19" smd circle
+	(pad "R19" smd circle
 		(at 3.75 1.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q20" smd circle
+	(pad "R20" smd circle
 		(at 4.25 1.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q21" smd circle
+	(pad "R21" smd circle
 		(at 4.75 1.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q22" smd circle
+	(pad "R22" smd circle
 		(at 5.25 1.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "R1" smd circle
+	(pad "T1" smd circle
 		(at -5.25 2.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "R2" smd circle
+	(pad "T2" smd circle
 		(at -4.75 2.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "R3" smd circle
+	(pad "T3" smd circle
 		(at -4.25 2.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "R4" smd circle
+	(pad "T4" smd circle
 		(at -3.75 2.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "R5" smd circle
+	(pad "T5" smd circle
 		(at -3.25 2.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "R6" smd circle
+	(pad "T6" smd circle
 		(at -2.75 2.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "R7" smd circle
+	(pad "T7" smd circle
 		(at -2.25 2.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "R8" smd circle
+	(pad "T8" smd circle
 		(at -1.75 2.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "R9" smd circle
+	(pad "T9" smd circle
 		(at -1.25 2.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "R10" smd circle
+	(pad "T10" smd circle
 		(at -0.75 2.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "R11" smd circle
+	(pad "T11" smd circle
 		(at -0.25 2.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "R12" smd circle
+	(pad "T12" smd circle
 		(at 0.25 2.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "R13" smd circle
+	(pad "T13" smd circle
 		(at 0.75 2.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "R14" smd circle
+	(pad "T14" smd circle
 		(at 1.25 2.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "R15" smd circle
+	(pad "T15" smd circle
 		(at 1.75 2.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "R16" smd circle
+	(pad "T16" smd circle
 		(at 2.25 2.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "R17" smd circle
+	(pad "T17" smd circle
 		(at 2.75 2.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "R18" smd circle
+	(pad "T18" smd circle
 		(at 3.25 2.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "R19" smd circle
+	(pad "T19" smd circle
 		(at 3.75 2.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "R20" smd circle
+	(pad "T20" smd circle
 		(at 4.25 2.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "R21" smd circle
+	(pad "T21" smd circle
 		(at 4.75 2.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "R22" smd circle
+	(pad "T22" smd circle
 		(at 5.25 2.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "S1" smd circle
+	(pad "U1" smd circle
 		(at -5.25 2.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "S2" smd circle
+	(pad "U2" smd circle
 		(at -4.75 2.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "S3" smd circle
+	(pad "U3" smd circle
 		(at -4.25 2.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "S4" smd circle
+	(pad "U4" smd circle
 		(at -3.75 2.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "S5" smd circle
+	(pad "U5" smd circle
 		(at -3.25 2.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "S6" smd circle
+	(pad "U6" smd circle
 		(at -2.75 2.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "S7" smd circle
+	(pad "U7" smd circle
 		(at -2.25 2.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "S8" smd circle
+	(pad "U8" smd circle
 		(at -1.75 2.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "S9" smd circle
+	(pad "U9" smd circle
 		(at -1.25 2.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "S10" smd circle
+	(pad "U10" smd circle
 		(at -0.75 2.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "S11" smd circle
+	(pad "U11" smd circle
 		(at -0.25 2.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "S12" smd circle
+	(pad "U12" smd circle
 		(at 0.25 2.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "S13" smd circle
+	(pad "U13" smd circle
 		(at 0.75 2.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "S14" smd circle
+	(pad "U14" smd circle
 		(at 1.25 2.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "S15" smd circle
+	(pad "U15" smd circle
 		(at 1.75 2.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "S16" smd circle
+	(pad "U16" smd circle
 		(at 2.25 2.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "S17" smd circle
+	(pad "U17" smd circle
 		(at 2.75 2.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "S18" smd circle
+	(pad "U18" smd circle
 		(at 3.25 2.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "S19" smd circle
+	(pad "U19" smd circle
 		(at 3.75 2.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "S20" smd circle
+	(pad "U20" smd circle
 		(at 4.25 2.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "S21" smd circle
+	(pad "U21" smd circle
 		(at 4.75 2.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "S22" smd circle
+	(pad "U22" smd circle
 		(at 5.25 2.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "T1" smd circle
+	(pad "V1" smd circle
 		(at -5.25 3.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "T2" smd circle
+	(pad "V2" smd circle
 		(at -4.75 3.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "T3" smd circle
+	(pad "V3" smd circle
 		(at -4.25 3.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "T4" smd circle
+	(pad "V4" smd circle
 		(at -3.75 3.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "T5" smd circle
+	(pad "V5" smd circle
 		(at -3.25 3.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "T6" smd circle
+	(pad "V6" smd circle
 		(at -2.75 3.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "T7" smd circle
+	(pad "V7" smd circle
 		(at -2.25 3.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "T8" smd circle
+	(pad "V8" smd circle
 		(at -1.75 3.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "T9" smd circle
+	(pad "V9" smd circle
 		(at -1.25 3.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "T10" smd circle
+	(pad "V10" smd circle
 		(at -0.75 3.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "T11" smd circle
+	(pad "V11" smd circle
 		(at -0.25 3.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "T12" smd circle
+	(pad "V12" smd circle
 		(at 0.25 3.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "T13" smd circle
+	(pad "V13" smd circle
 		(at 0.75 3.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "T14" smd circle
+	(pad "V14" smd circle
 		(at 1.25 3.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "T15" smd circle
+	(pad "V15" smd circle
 		(at 1.75 3.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "T16" smd circle
+	(pad "V16" smd circle
 		(at 2.25 3.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "T17" smd circle
+	(pad "V17" smd circle
 		(at 2.75 3.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "T18" smd circle
+	(pad "V18" smd circle
 		(at 3.25 3.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "T19" smd circle
+	(pad "V19" smd circle
 		(at 3.75 3.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "T20" smd circle
+	(pad "V20" smd circle
 		(at 4.25 3.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "T21" smd circle
+	(pad "V21" smd circle
 		(at 4.75 3.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "T22" smd circle
+	(pad "V22" smd circle
 		(at 5.25 3.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "U1" smd circle
+	(pad "W1" smd circle
 		(at -5.25 3.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "U2" smd circle
+	(pad "W2" smd circle
 		(at -4.75 3.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "U3" smd circle
+	(pad "W3" smd circle
 		(at -4.25 3.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "U4" smd circle
+	(pad "W4" smd circle
 		(at -3.75 3.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "U5" smd circle
+	(pad "W5" smd circle
 		(at -3.25 3.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "U6" smd circle
+	(pad "W6" smd circle
 		(at -2.75 3.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "U7" smd circle
+	(pad "W7" smd circle
 		(at -2.25 3.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "U8" smd circle
+	(pad "W8" smd circle
 		(at -1.75 3.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "U9" smd circle
+	(pad "W9" smd circle
 		(at -1.25 3.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "U10" smd circle
+	(pad "W10" smd circle
 		(at -0.75 3.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "U11" smd circle
+	(pad "W11" smd circle
 		(at -0.25 3.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "U12" smd circle
+	(pad "W12" smd circle
 		(at 0.25 3.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "U13" smd circle
+	(pad "W13" smd circle
 		(at 0.75 3.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "U14" smd circle
+	(pad "W14" smd circle
 		(at 1.25 3.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "U15" smd circle
+	(pad "W15" smd circle
 		(at 1.75 3.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "U16" smd circle
+	(pad "W16" smd circle
 		(at 2.25 3.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "U17" smd circle
+	(pad "W17" smd circle
 		(at 2.75 3.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "U18" smd circle
+	(pad "W18" smd circle
 		(at 3.25 3.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "U19" smd circle
+	(pad "W19" smd circle
 		(at 3.75 3.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "U20" smd circle
+	(pad "W20" smd circle
 		(at 4.25 3.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "U21" smd circle
+	(pad "W21" smd circle
 		(at 4.75 3.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "U22" smd circle
+	(pad "W22" smd circle
 		(at 5.25 3.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "V1" smd circle
+	(pad "Y1" smd circle
 		(at -5.25 4.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "V2" smd circle
+	(pad "Y2" smd circle
 		(at -4.75 4.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "V3" smd circle
+	(pad "Y3" smd circle
 		(at -4.25 4.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "V4" smd circle
+	(pad "Y4" smd circle
 		(at -3.75 4.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "V5" smd circle
+	(pad "Y5" smd circle
 		(at -3.25 4.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "V6" smd circle
+	(pad "Y6" smd circle
 		(at -2.75 4.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "V7" smd circle
+	(pad "Y7" smd circle
 		(at -2.25 4.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "V8" smd circle
+	(pad "Y8" smd circle
 		(at -1.75 4.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "V9" smd circle
+	(pad "Y9" smd circle
 		(at -1.25 4.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "V10" smd circle
+	(pad "Y10" smd circle
 		(at -0.75 4.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "V11" smd circle
+	(pad "Y11" smd circle
 		(at -0.25 4.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "V12" smd circle
+	(pad "Y12" smd circle
 		(at 0.25 4.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "V13" smd circle
+	(pad "Y13" smd circle
 		(at 0.75 4.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "V14" smd circle
+	(pad "Y14" smd circle
 		(at 1.25 4.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "V15" smd circle
+	(pad "Y15" smd circle
 		(at 1.75 4.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "V16" smd circle
+	(pad "Y16" smd circle
 		(at 2.25 4.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "V17" smd circle
+	(pad "Y17" smd circle
 		(at 2.75 4.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "V18" smd circle
+	(pad "Y18" smd circle
 		(at 3.25 4.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "V19" smd circle
+	(pad "Y19" smd circle
 		(at 3.75 4.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "V20" smd circle
+	(pad "Y20" smd circle
 		(at 4.25 4.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "V21" smd circle
+	(pad "Y21" smd circle
 		(at 4.75 4.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "V22" smd circle
+	(pad "Y22" smd circle
 		(at 5.25 4.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "W1" smd circle
+	(pad "AA1" smd circle
 		(at -5.25 4.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "W2" smd circle
+	(pad "AA2" smd circle
 		(at -4.75 4.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "W3" smd circle
+	(pad "AA3" smd circle
 		(at -4.25 4.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "W4" smd circle
+	(pad "AA4" smd circle
 		(at -3.75 4.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "W5" smd circle
+	(pad "AA5" smd circle
 		(at -3.25 4.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "W6" smd circle
+	(pad "AA6" smd circle
 		(at -2.75 4.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "W7" smd circle
+	(pad "AA7" smd circle
 		(at -2.25 4.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "W8" smd circle
+	(pad "AA8" smd circle
 		(at -1.75 4.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "W9" smd circle
+	(pad "AA9" smd circle
 		(at -1.25 4.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "W10" smd circle
+	(pad "AA10" smd circle
 		(at -0.75 4.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "W11" smd circle
+	(pad "AA11" smd circle
 		(at -0.25 4.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "W12" smd circle
+	(pad "AA12" smd circle
 		(at 0.25 4.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "W13" smd circle
+	(pad "AA13" smd circle
 		(at 0.75 4.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "W14" smd circle
+	(pad "AA14" smd circle
 		(at 1.25 4.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "W15" smd circle
+	(pad "AA15" smd circle
 		(at 1.75 4.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "W16" smd circle
+	(pad "AA16" smd circle
 		(at 2.25 4.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "W17" smd circle
+	(pad "AA17" smd circle
 		(at 2.75 4.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "W18" smd circle
+	(pad "AA18" smd circle
 		(at 3.25 4.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "W19" smd circle
+	(pad "AA19" smd circle
 		(at 3.75 4.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "W20" smd circle
+	(pad "AA20" smd circle
 		(at 4.25 4.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "W21" smd circle
+	(pad "AA21" smd circle
 		(at 4.75 4.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "W22" smd circle
+	(pad "AA22" smd circle
 		(at 5.25 4.75)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "X1" smd circle
+	(pad "AB1" smd circle
 		(at -5.25 5.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "X2" smd circle
+	(pad "AB2" smd circle
 		(at -4.75 5.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "X3" smd circle
+	(pad "AB3" smd circle
 		(at -4.25 5.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "X4" smd circle
+	(pad "AB4" smd circle
 		(at -3.75 5.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "X5" smd circle
+	(pad "AB5" smd circle
 		(at -3.25 5.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "X6" smd circle
+	(pad "AB6" smd circle
 		(at -2.75 5.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "X7" smd circle
+	(pad "AB7" smd circle
 		(at -2.25 5.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "X8" smd circle
+	(pad "AB8" smd circle
 		(at -1.75 5.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "X9" smd circle
+	(pad "AB9" smd circle
 		(at -1.25 5.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "X10" smd circle
+	(pad "AB10" smd circle
 		(at -0.75 5.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "X11" smd circle
+	(pad "AB11" smd circle
 		(at -0.25 5.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "X12" smd circle
+	(pad "AB12" smd circle
 		(at 0.25 5.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "X13" smd circle
+	(pad "AB13" smd circle
 		(at 0.75 5.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "X14" smd circle
+	(pad "AB14" smd circle
 		(at 1.25 5.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "X15" smd circle
+	(pad "AB15" smd circle
 		(at 1.75 5.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "X16" smd circle
+	(pad "AB16" smd circle
 		(at 2.25 5.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "X17" smd circle
+	(pad "AB17" smd circle
 		(at 2.75 5.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "X18" smd circle
+	(pad "AB18" smd circle
 		(at 3.25 5.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "X19" smd circle
+	(pad "AB19" smd circle
 		(at 3.75 5.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "X20" smd circle
+	(pad "AB20" smd circle
 		(at 4.25 5.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "X21" smd circle
+	(pad "AB21" smd circle
 		(at 4.75 5.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "X22" smd circle
+	(pad "AB22" smd circle
 		(at 5.25 5.25)
 		(size 0.3 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")

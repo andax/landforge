@@ -9,7 +9,7 @@ Uses Table 3-17 for courtyard excess (2.0/1.0/0.5mm for A/B/C).
 Pad diameter calculated via calculate_bga_land_diameter() which uses
 percentage-based reduction/increase per IPC-7351B Section 14.
 
-BGA pin naming: alpha rows (A-Z skipping I and O), numeric columns (1-N).
+BGA pin naming: alpha rows (JEDEC: A-Y skipping I,O,Q,S,X,Z), numeric columns (1-N).
 All pads are circular with PadProperty.BGA and NSMD solder mask.
 
 KiCad orientation convention:
@@ -40,15 +40,16 @@ from generator.core.layers import (
 )
 
 
-# BGA row letters: A-Z skipping I and O (IPC/JEDEC convention)
-_BGA_ROW_LETTERS = [c for c in "ABCDEFGHJKLMNPQRSTUVWXYZ"]
+# BGA row letters per JEDEC JESD95-1 / MS-034: A-Y skipping I, O, Q, S,
+# X and Z (letters that could be confused with numbers or other letters).
+_BGA_ROW_LETTERS = [c for c in "ABCDEFGHJKLMNPRTUVWY"]
 
 
 def bga_row_name(row_index: int) -> str:
     """Convert a zero-based row index to BGA row letter(s).
 
-    Single letter for rows 0-23 (A-Y skipping I,O), then doubles:
-    AA, AB, ... AY, BA, BB, ... for rows >= 24.
+    Single letter for rows 0-19 (A-Y skipping I,O,Q,S,X,Z), then doubles:
+    AA, AB, ... AY, BA, BB, ... for rows >= 20.
     """
     n = len(_BGA_ROW_LETTERS)
     if row_index < n:

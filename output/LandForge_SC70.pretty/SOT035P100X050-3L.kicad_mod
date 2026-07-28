@@ -1,9 +1,9 @@
-(footprint "SOT035P140X050-6M"
+(footprint "SOT035P100X050-3L"
 	(version 20260206)
 	(generator "landforge")
 	(layer "F.Cu")
-	(descr "IPC-7351B Level A SOT-963. Table 3-2. Z=2.85 G=-0.25 X=0.35. Courtyard excess=0.50mm.")
-	(tags "SOT035P140X050-6M sot-963 IPC7351B density_A")
+	(descr "IPC-7351B Level C SOT-883. Table 3-16. Z=1.50 G=0.25 X=0.25. Courtyard excess=0.10mm.")
+	(tags "SOT035P100X050-3L sot-883 IPC7351B density_C")
 	(property "Reference" "REF**"
 		(at 0 -1.5 0)
 		(layer "F.SilkS")
@@ -14,7 +14,7 @@
 			)
 		)
 	)
-	(property "Value" "SOT035P140X050-6M"
+	(property "Value" "SOT035P100X050-3L"
 		(at 0 1.5 0)
 		(layer "F.Fab")
 		(effects
@@ -24,7 +24,7 @@
 			)
 		)
 	)
-	(property "IPC_Table" "3-2"
+	(property "IPC_Table" "3-16"
 		(at 0 0 0)
 		(layer "F.SilkS")
 		(hide yes)
@@ -35,7 +35,7 @@
 			)
 		)
 	)
-	(property "DensityLevel" "A"
+	(property "DensityLevel" "C"
 		(at 0 0 0)
 		(layer "F.SilkS")
 		(hide yes)
@@ -60,8 +60,8 @@
 	(attr smd)
 	(duplicate_pad_numbers_are_jumpers no)
 	(fp_line
-		(start -0.35 -0.5)
-		(end 0.5 -0.5)
+		(start -0.21 -0.5)
+		(end 0.3 -0.5)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -69,8 +69,8 @@
 		(layer "F.Fab")
 	)
 	(fp_line
-		(start 0.5 -0.5)
-		(end 0.5 0.5)
+		(start 0.3 -0.5)
+		(end 0.3 0.5)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -78,8 +78,8 @@
 		(layer "F.Fab")
 	)
 	(fp_line
-		(start 0.5 0.5)
-		(end -0.5 0.5)
+		(start 0.3 0.5)
+		(end -0.3 0.5)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -87,8 +87,8 @@
 		(layer "F.Fab")
 	)
 	(fp_line
-		(start -0.5 0.5)
-		(end -0.5 -0.35)
+		(start -0.3 0.5)
+		(end -0.3 -0.41)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -96,8 +96,8 @@
 		(layer "F.Fab")
 	)
 	(fp_line
-		(start -0.5 -0.35)
-		(end -0.35 -0.5)
+		(start -0.3 -0.41)
+		(end -0.21 -0.5)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -105,8 +105,8 @@
 		(layer "F.Fab")
 	)
 	(fp_line
-		(start -0.5 -0.685)
-		(end 0.5 -0.685)
+		(start -0.3 -0.635)
+		(end 0.3 -0.635)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -114,8 +114,8 @@
 		(layer "F.SilkS")
 	)
 	(fp_line
-		(start -0.5 0.685)
-		(end 0.5 0.685)
+		(start -0.3 0.635)
+		(end 0.3 0.635)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -123,8 +123,8 @@
 		(layer "F.SilkS")
 	)
 	(fp_rect
-		(start -1.95 -1.05)
-		(end 1.95 1.05)
+		(start -0.85 -0.6)
+		(end 0.85 0.6)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -133,8 +133,8 @@
 		(layer "F.CrtYd")
 	)
 	(fp_circle
-		(center -1.825 -0.685)
-		(end -1.725 -0.685)
+		(center -1.15 -0.635)
+		(end -1.05 -0.635)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -147,44 +147,26 @@
 		(layer "F.Fab")
 		(effects
 			(font
-				(size 0.6 0.6)
-				(thickness 0.09)
+				(size 0.36 0.36)
+				(thickness 0.054)
 			)
 		)
 	)
 	(pad "1" smd roundrect
-		(at -0.65 -0.35)
-		(size 1.55 0.35)
+		(at -0.4375 -0.35)
+		(size 0.625 0.25)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.25)
 	)
 	(pad "2" smd roundrect
-		(at -0.65 0.0)
-		(size 1.55 0.35)
+		(at -0.4375 0.35)
+		(size 0.625 0.25)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.25)
 	)
 	(pad "3" smd roundrect
-		(at -0.65 0.35)
-		(size 1.55 0.35)
-		(layers "F.Cu" "F.Mask" "F.Paste")
-		(roundrect_rratio 0.25)
-	)
-	(pad "4" smd roundrect
-		(at 0.65 0.35)
-		(size 1.55 0.35)
-		(layers "F.Cu" "F.Mask" "F.Paste")
-		(roundrect_rratio 0.25)
-	)
-	(pad "5" smd roundrect
-		(at 0.65 0.0)
-		(size 1.55 0.35)
-		(layers "F.Cu" "F.Mask" "F.Paste")
-		(roundrect_rratio 0.25)
-	)
-	(pad "6" smd roundrect
-		(at 0.65 -0.35)
-		(size 1.55 0.35)
+		(at 0.4375 0.0)
+		(size 0.625 0.25)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.25)
 	)

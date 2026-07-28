@@ -1,0 +1,126 @@
+family,ipc_library,ipc_name,stock_library,stock_name,flags,note
+SOIC,IPC7351B_SOIC,SOIC127P600X175-8N,Package_SO,SOIC-8_3.9x4.9mm_P1.27mm,,
+SOIC,IPC7351B_SOIC,SOIC127P600X175-14N,Package_SO,SOIC-14_3.9x8.7mm_P1.27mm,,
+SOIC,IPC7351B_SOIC,SOIC127P600X175-16N,Package_SO,SOIC-16_3.9x9.9mm_P1.27mm,,
+SOIC,IPC7351B_SOIC,SOIC127P1030X265-18N,Package_SO,SOIC-18W_7.5x11.6mm_P1.27mm,,
+SOIC,IPC7351B_SOIC,SOIC127P1030X265-20N,Package_SO,SOIC-20W_7.5x12.8mm_P1.27mm,,
+SOIC,IPC7351B_SOIC,SOIC127P1030X265-24N,Package_SO,SOIC-24W_7.5x15.4mm_P1.27mm,,
+SOIC,IPC7351B_SOIC,SOIC127P1030X265-28N,Package_SO,SOIC-28W_7.5x17.9mm_P1.27mm,,
+SSOP,IPC7351B_SOIC,SSOP065P780X200-14N,Package_SO,SSOP-14_5.3x6.2mm_P0.65mm,,
+SSOP,IPC7351B_SOIC,SSOP065P780X200-16N,Package_SO,SSOP-16_5.3x6.2mm_P0.65mm,,
+SSOP,IPC7351B_SOIC,SSOP065P780X200-20N,Package_SO,SSOP-20_5.3x7.2mm_P0.65mm,,
+SSOP,IPC7351B_SOIC,SSOP065P780X200-24N,Package_SO,SSOP-24_5.3x8.2mm_P0.65mm,,
+SSOP,IPC7351B_SOIC,SSOP065P780X200-28N,Package_SO,SSOP-28_5.3x10.2mm_P0.65mm,,
+SSOP,IPC7351B_SOIC,SSOP065P530X175-8N,Package_SO,SSOP-8_2.95x2.8mm_P0.65mm,loose,closest stock analog; body width differs
+TSSOP,IPC7351B_SOIC,TSSOP065P640X120-8N,Package_SO,TSSOP-8_4.4x3mm_P0.65mm,,
+TSSOP,IPC7351B_SOIC,TSSOP065P640X120-14N,Package_SO,TSSOP-14_4.4x5mm_P0.65mm,,
+TSSOP,IPC7351B_SOIC,TSSOP065P640X120-16N,Package_SO,TSSOP-16_4.4x5mm_P0.65mm,,
+TSSOP,IPC7351B_SOIC,TSSOP065P640X120-20N,Package_SO,TSSOP-20_4.4x6.5mm_P0.65mm,,
+TSSOP,IPC7351B_SOIC,TSSOP065P640X120-24N,Package_SO,TSSOP-24_4.4x7.8mm_P0.65mm,,
+TSSOP,IPC7351B_SOIC,TSSOP065P640X120-28N,Package_SO,TSSOP-28_4.4x9.7mm_P0.65mm,,
+TSSOP,IPC7351B_SOIC,TSSOP050P810X120-48N,Package_SO,TSSOP-48_6.1x12.5mm_P0.5mm,,
+MSOP,IPC7351B_SOIC,MSOP065P490X110-8N,Package_SO,MSOP-8_3x3mm_P0.65mm,,
+MSOP,IPC7351B_SOIC,MSOP065P490X110-12N,Package_SO,MSOP-12_3x4.039mm_P0.65mm,,
+MSOP,IPC7351B_SOIC,MSOP050P490X110-10N,Package_SO,MSOP-10_3x3mm_P0.5mm,,
+MSOP,IPC7351B_SOIC,MSOP050P490X110-16N,Package_SO,MSOP-16_3x4.039mm_P0.5mm,,
+QFP,IPC7351B_SOIC,QFP050P900X900X120-48N,Package_QFP,LQFP-48_7x7mm_P0.5mm,,
+QFP,IPC7351B_SOIC,QFP050P1200X1200X120-64N,Package_QFP,LQFP-64_10x10mm_P0.5mm,,
+QFP,IPC7351B_SOIC,QFP050P1600X1600X120-100N,Package_QFP,LQFP-100_14x14mm_P0.5mm,,
+QFP,IPC7351B_SOIC,QFP050P2200X2200X120-144N,Package_QFP,LQFP-144_20x20mm_P0.5mm,,
+QFP,IPC7351B_SOIC,QFP050P2600X2600X120-176N,Package_QFP,LQFP-176_24x24mm_P0.5mm,,
+QFP,IPC7351B_SOIC,QFP050P3000X3000X120-208N,Package_QFP,LQFP-208_28x28mm_P0.5mm,,
+QFP,IPC7351B_SOIC,QFP065P1200X1200X120-52N,Package_QFP,LQFP-52_10x10mm_P0.65mm,,
+QFP,IPC7351B_SOIC,QFP080P900X900X120-32N,Package_QFP,LQFP-32_7x7mm_P0.8mm,,
+QFP,IPC7351B_SOIC,QFP080P1200X1200X120-44N,Package_QFP,LQFP-44_10x10mm_P0.8mm,,
+QFP,IPC7351B_SOIC,QFP040P3000X3000X120-256N,Package_QFP,PQFP-256_28x28mm_P0.4mm,loose,PQFP lead geometry differs from generic QFP
+QFN,IPC7351B_QFN,QFN050P300X300X090-16T150N,Package_DFN_QFN,QFN-16-1EP_3x3mm_P0.5mm_EP1.45x1.45mm,,EP 1.50 vs 1.45
+QFN,IPC7351B_QFN,QFN050P400X400X090-20T250N,Package_DFN_QFN,QFN-20-1EP_4x4mm_P0.5mm_EP2.5x2.5mm,,
+QFN,IPC7351B_QFN,QFN050P400X400X090-24T250N,Package_DFN_QFN,QFN-24-1EP_4x4mm_P0.5mm_EP2.5x2.5mm,,
+QFN,IPC7351B_QFN,QFN050P500X500X090-32T340N,Package_DFN_QFN,QFN-32-1EP_5x5mm_P0.5mm_EP3.45x3.45mm,,EP 3.40 vs 3.45
+QFN,IPC7351B_QFN,QFN040P500X500X090-40T340N,Package_DFN_QFN,QFN-40-1EP_5x5mm_P0.4mm_EP3.6x3.6mm,,EP 3.40 vs 3.60
+QFN,IPC7351B_QFN,QFN050P700X700X090-48T510N,Package_DFN_QFN,QFN-48-1EP_7x7mm_P0.5mm_EP5.1x5.1mm,,
+QFN,IPC7351B_QFN,QFN050P900X900X090-64T710N,Package_DFN_QFN,QFN-64-1EP_9x9mm_P0.5mm_EP7.15x7.15mm,,EP 7.10 vs 7.15
+DFN,IPC7351B_QFN,DFN050P300X300X090-8T240N,Package_DFN_QFN,DFN-8-1EP_3x3mm_P0.5mm_EP1.7x2.4mm,loose,stock is vendor app-note pattern; verify lead lands against Table 3-15
+DFN,IPC7351B_QFN,DFN050P300X300X090-10T240N,Package_DFN_QFN,DFN-10-1EP_3x3mm_P0.5mm_EP1.65x2.38mm,loose,stock is vendor app-note pattern; verify lead lands against Table 3-15
+DFN,IPC7351B_QFN,DFN065P200X200X090-6T120N,Package_DFN_QFN,DFN-6-1EP_2x2mm_P0.65mm_EP1x1.6mm,loose,EP 0.6x1.2 vs 1x1.6; vendor EPs vary
+SOT,IPC7351B_SOT,SOT095P240X110-3N,Package_TO_SOT_SMD,SOT-23,,
+SOT,IPC7351B_SOT,SOT095P240X110-5N,Package_TO_SOT_SMD,SOT-23-5,,
+SOT,IPC7351B_SOT,SOT095P240X110-6N,Package_TO_SOT_SMD,SOT-23-6,,
+SOT,IPC7351B_SOT,SOT095P240X110-4N,Package_TO_SOT_SMD,SOT-143,loose,real SOT-143 pin 1 is wider; ours uses uniform pins
+SOT,IPC7351B_SOT,SOT150P400X160-3N,Package_TO_SOT_SMD,SOT-89-3,subset loose,ours has separate tab pad 4; stock merges tab into pin 2 and uses vendor pattern
+SOT,IPC7351B_SOT,SOT230P670X180-4N,Package_TO_SOT_SMD,SOT-223,,tab modeled as flat lead per Table 3-2 with JEDEC TO-261 tab width 2.9-3.1
+SOT,IPC7351B_SOT,SOT228P980X230-3N,Package_TO_SOT_SMD,TO-252-3_TabPin4,,tab modeled as flat lead per Table 3-14 with JEDEC TO-252 tab contact dims
+SOT,IPC7351B_SOT,SOT254P1520X440-3N,Package_TO_SOT_SMD,TO-263-3_TabPin4,loose,tab per Table 3-14 with JEDEC TO-263 dims; stock lead/tab lands are vendor thermal-enhanced and extend inward
+SOD,IPC7351B_SOT,SOD36027X120N,Diode_SMD,D_SOD-123,loose,stock uses vendor-minimal pattern; IPC-7351B Level B is intentionally larger
+SOD,IPC7351B_SOT,SOD25017X100N,Diode_SMD,D_SOD-323,loose,stock uses vendor-minimal pattern; IPC-7351B Level B is intentionally larger
+SOD,IPC7351B_SOT,SOD16012X060N,Diode_SMD,D_SOD-523,loose,stock uses vendor-minimal pattern; IPC-7351B Level B is intentionally larger
+DIP,IPC7351B_DIP,DIP762W330P254-8N,Package_DIP,DIP-8_W7.62mm,,
+DIP,IPC7351B_DIP,DIP762W330P254-14N,Package_DIP,DIP-14_W7.62mm,,
+DIP,IPC7351B_DIP,DIP762W330P254-16N,Package_DIP,DIP-16_W7.62mm,,
+DIP,IPC7351B_DIP,DIP762W330P254-18N,Package_DIP,DIP-18_W7.62mm,,
+DIP,IPC7351B_DIP,DIP762W330P254-20N,Package_DIP,DIP-20_W7.62mm,,
+DIP,IPC7351B_DIP,DIP1524W457P254-24N,Package_DIP,DIP-24_W15.24mm,,
+DIP,IPC7351B_DIP,DIP1524W457P254-28N,Package_DIP,DIP-28_W15.24mm,,
+DIP,IPC7351B_DIP,DIP1524W457P254-32N,Package_DIP,DIP-32_W15.24mm,,
+DIP,IPC7351B_DIP,DIP1524W457P254-40N,Package_DIP,DIP-40_W15.24mm,,
+DIP,IPC7351B_DIP,DIP1524W457P254-48N,Package_DIP,DIP-48_W15.24mm,,
+DIP,IPC7351B_DIP,DIP1524W457P254-64N,Package_DIP,DIP-64_W15.24mm,,
+MELF,IPC7351B_MELF,RESMELF220X110N,Resistor_SMD,R_MicroMELF_MMU-0102,,
+MELF,IPC7351B_MELF,RESMELF360X140N,Resistor_SMD,R_MiniMELF_MMA-0204,,
+MELF,IPC7351B_MELF,RESMELF580X220N,Resistor_SMD,R_MELF_MMB-0207,,
+MELF,IPC7351B_MELF,DIOMELF220X110N,Diode_SMD,D_MicroMELF,loose,stock uses vendor-minimal pattern; IPC-7351B Level B is intentionally larger
+MELF,IPC7351B_MELF,DIOMELF360X140N,Diode_SMD,D_MiniMELF,,
+MELF,IPC7351B_MELF,DIOMELF580X220N,Diode_SMD,D_MELF,,
+MOLDED,IPC7351B_Molded,CAPMP2012X120N,Capacitor_Tantalum_SMD,CP_EIA-2012-12_Kemet-R,,
+MOLDED,IPC7351B_Molded,CAPMP3216X180N,Capacitor_Tantalum_SMD,CP_EIA-3216-18_Kemet-A,,
+MOLDED,IPC7351B_Molded,CAPMP3528X210N,Capacitor_Tantalum_SMD,CP_EIA-3528-21_Kemet-B,,
+MOLDED,IPC7351B_Molded,CAPMP6032X280N,Capacitor_Tantalum_SMD,CP_EIA-6032-28_Kemet-C,,
+MOLDED,IPC7351B_Molded,CAPMP7343X310N,Capacitor_Tantalum_SMD,CP_EIA-7343-31_Kemet-D,,EIA-7343 terminal width 2.3-2.5 (Kemet D)
+MOLDED,IPC7351B_Molded,CAPMP7343X430N,Capacitor_Tantalum_SMD,CP_EIA-7343-43_Kemet-X,,EIA-7343 terminal width 2.3-2.5 (Kemet X)
+MOLDED,IPC7351B_Molded,DIOM4724X240N,Diode_SMD,D_SMA,loose,JEDEC DO-214AC analog; body dims approximate
+MOLDED,IPC7351B_Molded,DIOM5336X240N,Diode_SMD,D_SMB,loose,JEDEC DO-214AA analog; body dims approximate
+MOLDED,IPC7351B_Molded,DIOM7661X240N,Diode_SMD,D_SMC,loose,JEDEC DO-214AB analog; body dims approximate
+MOLDED,IPC7351B_Molded,LEDM2012X080N,LED_SMD,LED_0805_2012Metric,loose,"stock LED pattern is vendor-derived, differs from molded table"
+MOLDED,IPC7351B_Molded,LEDM3216X110N,LED_SMD,LED_1206_3216Metric,loose,"stock LED pattern is vendor-derived, differs from molded table"
+MOLDED,IPC7351B_Molded,FUSM1608X080N,Fuse,Fuse_0603_1608Metric,loose,stock fuse pattern derived from chip table; ours uses molded table
+MOLDED,IPC7351B_Molded,FUSM3216X160N,Fuse,Fuse_1206_3216Metric,loose,stock fuse pattern derived from chip table; ours uses molded table
+CAPAE,IPC7351B_Electrolytic,CAPAE300X540N,Capacitor_SMD,CP_Elec_3x5.4,,
+CAPAE,IPC7351B_Electrolytic,CAPAE400X540N,Capacitor_SMD,CP_Elec_4x5.4,,
+CAPAE,IPC7351B_Electrolytic,CAPAE500X540N,Capacitor_SMD,CP_Elec_5x5.4,,
+CAPAE,IPC7351B_Electrolytic,CAPAE500X580N,Capacitor_SMD,CP_Elec_5x5.8,,
+CAPAE,IPC7351B_Electrolytic,CAPAE630X540N,Capacitor_SMD,CP_Elec_6.3x5.4,,
+CAPAE,IPC7351B_Electrolytic,CAPAE630X580N,Capacitor_SMD,CP_Elec_6.3x5.8,,
+CAPAE,IPC7351B_Electrolytic,CAPAE630X770N,Capacitor_SMD,CP_Elec_6.3x7.7,,
+CAPAE,IPC7351B_Electrolytic,CAPAE800X540N,Capacitor_SMD,CP_Elec_8x5.4,,
+CAPAE,IPC7351B_Electrolytic,CAPAE800X620N,Capacitor_SMD,CP_Elec_8x6.2,,
+CAPAE,IPC7351B_Electrolytic,CAPAE800X1020N,Capacitor_SMD,CP_Elec_8x10,,height 10.2 vs 10.0
+CAPAE,IPC7351B_Electrolytic,CAPAE1000X1020N,Capacitor_SMD,CP_Elec_10x10,,height 10.2 vs 10.0
+CAPAE,IPC7351B_Electrolytic,CAPAE1000X1250N,Capacitor_SMD,CP_Elec_10x12.5,,
+CAPAE,IPC7351B_Electrolytic,CAPAE1600X1650N,Capacitor_SMD,CP_Elec_16x17.5,loose,height 16.5 vs 17.5
+CRYSTAL,LandForge_Crystal,XTAL200X120X060-2N,Crystal,Crystal_SMD_2012-2Pin_2.0x1.2mm,loose,stock crystal patterns are vendor-derived
+CRYSTAL,LandForge_Crystal,XTAL320X150X080-2N,Crystal,Crystal_SMD_3215-2Pin_3.2x1.5mm,loose pinmap=1:2+2:1,non-polar 2-pin; stock numbers left pad 2; vendor-derived pattern
+CRYSTAL,LandForge_Crystal,XTAL500X320X100-2N,Crystal,Crystal_SMD_5032-2Pin_5.0x3.2mm,loose,stock crystal patterns are vendor-derived
+CRYSTAL,LandForge_Crystal,XTAL700X500X150-2N,Crystal,Crystal_SMD_7050-2Pin_7.0x5.0mm,loose,stock crystal patterns are vendor-derived
+CRYSTAL,LandForge_Crystal,OSCL200X160X060-4N,Crystal,Crystal_SMD_2016-4Pin_2.0x1.6mm,pinmap=1:4+2:1+3:2+4:3,stock numbers pin 1 bottom-left CCW; ours top-left
+CRYSTAL,LandForge_Crystal,OSCL250X200X070-4N,Crystal,Crystal_SMD_2520-4Pin_2.5x2.0mm,pinmap=1:4+2:1+3:2+4:3,stock numbers pin 1 bottom-left CCW; ours top-left
+CRYSTAL,LandForge_Crystal,OSCL320X250X090-4N,Crystal,Crystal_SMD_3225-4Pin_3.2x2.5mm,pinmap=1:4+2:1+3:2+4:3,stock numbers pin 1 bottom-left CCW; ours top-left
+CRYSTAL,LandForge_Crystal,OSCL500X320X100-4N,Crystal,Crystal_SMD_5032-4Pin_5.0x3.2mm,pinmap=1:4+2:1+3:2+4:3 loose,stock numbers pin 1 bottom-left CCW; vendor-derived pattern
+CRYSTAL,LandForge_Crystal,OSCL700X500X150-4N,Crystal,Crystal_SMD_7050-4Pin_7.0x5.0mm,pinmap=1:4+2:1+3:2+4:3 loose,stock numbers pin 1 bottom-left CCW; vendor-derived pattern
+SC70,LandForge_SC70,SOT065P220X110-3N,Package_TO_SOT_SMD,SOT-323_SC-70,loose,stock uses vendor-minimal pattern; IPC-7351B Level B is intentionally larger
+SC70,LandForge_SC70,SOT065P220X110-4N,Package_TO_SOT_SMD,SOT-343_SC-70-4,loose,stock uses vendor-minimal pattern; IPC-7351B Level B is intentionally larger
+SC70,LandForge_SC70,SOT065P220X110-5N,Package_TO_SOT_SMD,SOT-353_SC-70-5,loose,stock uses vendor-minimal pattern; IPC-7351B Level B is intentionally larger
+SC70,LandForge_SC70,SOT065P220X110-6N,Package_TO_SOT_SMD,SOT-363_SC-70-6,loose,stock uses vendor-minimal pattern; IPC-7351B Level B is intentionally larger
+SC70,LandForge_SC70,SOT050P160X060-3N,Package_TO_SOT_SMD,SOT-523,loose,stock uses vendor-minimal pattern; IPC-7351B Level B is intentionally larger; consider Level C for micro packages
+SC70,LandForge_SC70,SOT050P160X060-5N,Package_TO_SOT_SMD,SOT-553,loose,stock uses vendor-minimal pattern; IPC-7351B Level B is intentionally larger; consider Level C for micro packages
+SC70,LandForge_SC70,SOT050P160X060-6N,Package_TO_SOT_SMD,SOT-563,loose,stock uses vendor-minimal pattern; IPC-7351B Level B is intentionally larger; consider Level C for micro packages
+SC70,LandForge_SC70,SOT050P180X055-5N,Package_TO_SOT_SMD,SOT-665,loose,stock uses vendor-minimal pattern; IPC-7351B Level B is intentionally larger; consider Level C for micro packages
+SC70,LandForge_SC70,SOT050P180X055-6N,Package_TO_SOT_SMD,SOT-666,loose,stock uses vendor-minimal pattern; IPC-7351B Level B is intentionally larger; consider Level C for micro packages
+SC70,LandForge_SC70,SOT040P140X050-3N,Package_TO_SOT_SMD,SOT-723,loose,stock uses vendor-minimal pattern; IPC-7351B Level B is intentionally larger; consider Level C for micro packages
+SC70,LandForge_SC70,SOT035P100X050-3N,Package_TO_SOT_SMD,SOT-883,loose,"leadless XSON3, Table 3-16 no-lead fillets; stock uses vendor-minimal pattern; IPC-7351B Level B is intentionally larger"
+SC70,LandForge_SC70,SOT035P100X050-6N,Package_TO_SOT_SMD,SOT-963,loose,"leadless XSON6, Table 3-16 no-lead fillets; stock uses vendor-minimal pattern; IPC-7351B Level B is intentionally larger"
+SC70,LandForge_SC70,SOT080P180X070-3N,Package_TO_SOT_SMD,SOT-416,loose,stock uses vendor-minimal pattern; IPC-7351B Level B is intentionally larger
+BGA,IPC7351B_BGA,BGA100C080P10X10_900X900X120N,Package_BGA,BGA-64_9.0x9.0mm_Layout10x10_P0.8mm,subset,stock is perimeter-only 64-ball variant of same grid
+BGA,IPC7351B_BGA,BGA100C100P10X10_1200X1200X185N,Package_BGA,BGA-100_11.0x11.0mm_Layout10x10_P1.0mm_Ball0.5mm_Pad0.4mm_NSMD,loose,body 12 vs 11 mm; same ball grid
+BGA,IPC7351B_BGA,BGA144C100P12X12_1500X1500X185N,Package_BGA,BGA-144_13.0x13.0mm_Layout12x12_P1.0mm,loose,body 15 vs 13 mm; same ball grid
+BGA,IPC7351B_BGA,BGA256C100P16X16_1700X1700X185N,Package_BGA,BGA-256_17.0x17.0mm_Layout16x16_P1.0mm_Ball0.5mm_Pad0.4mm_NSMD,,JEDEC ball rows A-T skipping I O Q S
+WLCSP,LandForge_WLCSP,WLCSP36N040P6X6_257X257X055N,Package_CSP,WLCSP-36_2.82x2.67mm_Layout6x6_P0.4mm,loose,die size is vendor-specific; ball grid comparable

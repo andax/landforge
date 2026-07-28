@@ -2,7 +2,18 @@
 IPC-7357 DIP (Dual In-line Package) Through-Hole Generator.
 
 Generates footprints for through-hole DIP packages.
-Uses Table 3-12: Butt Joints.
+
+Land calculation: IPC-7351B covers surface mount only (its Table 3-12
+"Butt Joints" is for butt-MOUNTED DIPB, not through-hole). Through-hole
+holes and lands follow IPC-2221 / IPC-7251 practice:
+
+  lead diagonal = sqrt(lead_width_max^2 + lead_thickness_max^2)
+  hole  = diagonal + hole allowance  (A: 0.25, B: 0.20, C: 0.15 mm)
+  land  = hole + 2 x min annular ring (0.05) + fabrication allowance
+          (A: 0.60, B: 0.50, C: 0.40 mm)
+
+both rounded up to the 0.05 mm grid; the hole never goes below the
+datasheet-recommended drill from the CSV.
 
 Pin layout: two parallel rows along Y axis, pins along X.
 Pin 1 at top-left, numbered counter-clockwise.
@@ -11,21 +22,23 @@ Pin 1 at top-left, numbered counter-clockwise.
 from __future__ import annotations
 
 import csv
+import math
 import os
 from dataclasses import dataclass
 
-from generator.core.ipc_equations import (
-    DensityLevel,
-    ComponentDimensionsFromSpec,
-    calculate_land_pattern,
-)
-from generator.core.tables import TABLE_3_12
+from generator.core.ipc_equations import DensityLevel, round_to
 from generator.core.naming import density_suffix
 from generator.core.kicad_writer import (
     Footprint, Pad, PadShape, PadType,
     write_footprint,
 )
 from generator.core.layers import add_courtyard, add_fab_body
+
+# IPC-2221/7251 allowances per density level (mm)
+_HOLE_ALLOWANCE = {DensityLevel.A: 0.25, DensityLevel.B: 0.20, DensityLevel.C: 0.15}
+_FAB_ALLOWANCE = {DensityLevel.A: 0.60, DensityLevel.B: 0.50, DensityLevel.C: 0.40}
+_MIN_ANNULAR_RING = 0.05  # per side
+_COURTYARD_EXCESS = {DensityLevel.A: 0.50, DensityLevel.B: 0.25, DensityLevel.C: 0.10}
 
 
 @dataclass
@@ -43,14 +56,23 @@ class DipSpec:
     T_max: float
     W_min: float        # Lead thickness (min)
     W_max: float
-    drill: float        # Drill diameter
+    drill: float        # Datasheet-recommended minimum drill diameter
 
-    def to_ipc_dims(self) -> ComponentDimensionsFromSpec:
-        return ComponentDimensionsFromSpec(
-            L_min=self.L_min, L_max=self.L_max,
-            T_min=self.T_min, T_max=self.T_max,
-            W_min=self.W_min, W_max=self.W_max,
-        )
+    @property
+    def lead_diagonal(self) -> float:
+        """Worst-case diagonal of the rectangular lead cross-section."""
+        return math.hypot(self.T_max, self.W_max)
+
+    def hole_diameter(self, level: DensityLevel) -> float:
+        """Finished hole size per IPC-2221/7251, floored at CSV drill."""
+        hole = round_to(self.lead_diagonal + _HOLE_ALLOWANCE[level], 0.05)
+        return max(hole, self.drill)
+
+    def pad_diameter(self, level: DensityLevel) -> float:
+        """Land diameter: hole + 2x min annular ring + fab allowance."""
+        pad = (self.hole_diameter(level) + 2 * _MIN_ANNULAR_RING
+               + _FAB_ALLOWANCE[level])
+        return round_to(pad, 0.05)
 
 
 def _dip_ipc_name(spec: DipSpec, level: DensityLevel) -> str:
@@ -60,30 +82,27 @@ def _dip_ipc_name(spec: DipSpec, level: DensityLevel) -> str:
 
 
 def generate_dip_footprint(spec: DipSpec, level: DensityLevel) -> Footprint:
-    table = TABLE_3_12
-    comp = spec.to_ipc_dims().to_component_dimensions()
-    lp = calculate_land_pattern(comp, table, level)
-
     ipc_name = _dip_ipc_name(spec, level)
-    excess = table.courtyard_excess(level)
+    excess = _COURTYARD_EXCESS[level]
+    drill = spec.hole_diameter(level)
+    pad_dia = spec.pad_diameter(level)
 
     fp = Footprint(
         name=ipc_name,
         smd=False,
         description=(
-            f"IPC-7351B Level {level.name} DIP-{spec.pin_count}, "
-            f"{spec.row_spacing}mm row spacing. Table 3-12. "
+            f"Level {level.name} DIP-{spec.pin_count}, "
+            f"{spec.row_spacing}mm row spacing. IPC-2221/7251 THT lands: "
+            f"hole={drill:.2f} pad={pad_dia:.2f}. "
             f"Courtyard excess={excess:.2f}mm."
         ),
         tags=f"{ipc_name} dip {spec.pin_count}pin through_hole IPC7351B density_{level.name}",
-        properties={"IPC_Table": "3-12", "DensityLevel": level.name, "LandForge": "true"},
+        properties={"IPC_Table": "IPC-2221", "DensityLevel": level.name, "LandForge": "true"},
     )
 
     pins_per_side = spec.pin_count // 2
     row_cx = spec.row_spacing / 2
     y_start = -spec.pitch * (pins_per_side - 1) / 2
-
-    pad_dia = lp.pad_width  # Through-hole pad diameter
 
     # Left side (pins 1..N/2, top to bottom)
     for i in range(pins_per_side):
@@ -94,7 +113,7 @@ def generate_dip_footprint(spec: DipSpec, level: DensityLevel) -> Footprint:
             x=-row_cx, y=y_start + i * spec.pitch,
             width=pad_dia, height=pad_dia,
             layers=["*.Cu", "*.Mask"],
-            drill=spec.drill,
+            drill=drill,
             roundrect_ratio=None,
         ))
 
@@ -107,7 +126,7 @@ def generate_dip_footprint(spec: DipSpec, level: DensityLevel) -> Footprint:
             x=row_cx, y=y_start + (pins_per_side - 1 - i) * spec.pitch,
             width=pad_dia, height=pad_dia,
             layers=["*.Cu", "*.Mask"],
-            drill=spec.drill,
+            drill=drill,
             roundrect_ratio=None,
         ))
 

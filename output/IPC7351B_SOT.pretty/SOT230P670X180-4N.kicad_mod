@@ -172,9 +172,10 @@
 	)
 	(pad "4" smd roundrect
 		(at 2.8625 0.0)
-		(size 2.125 1.0)
-		(layers "F.Cu" "F.Mask" "F.Paste")
-		(roundrect_rratio 0.25)
+		(size 2.125 3.2)
+		(layers "F.Cu" "F.Mask")
+		(roundrect_rratio 0.1)
+		(pad_prop_heatsink)
 	)
 	(embedded_fonts no)
 )

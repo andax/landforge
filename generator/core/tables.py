@@ -226,12 +226,14 @@ TABLE_3_20 = ToleranceTable(
 )
 
 # Table 3-20 variant for large electrolytics (>= 10mm diameter)
+# IPC-7351B Table 3-20 "10.0 mm or higher" rows:
+#   toe 1.00/0.70/0.40, heel 0.00/-0.05/-0.10, side 0.60/0.50/0.40
 TABLE_3_20_LARGE = ToleranceTable(
     name="3-20L",
     description="Aluminum electrolytic capacitor >= 10mm (CAPAE)",
-    fillet_A=FilletGoals(toe=1.00, heel=0.00, side=0.50),
-    fillet_B=FilletGoals(toe=0.70, heel=-0.10, side=0.40),
-    fillet_C=FilletGoals(toe=0.40, heel=-0.20, side=0.30),
+    fillet_A=FilletGoals(toe=1.00, heel=0.00, side=0.60),
+    fillet_B=FilletGoals(toe=0.70, heel=-0.05, side=0.50),
+    fillet_C=FilletGoals(toe=0.40, heel=-0.10, side=0.40),
     courtyard=CourtyardExcess(A=1.00, B=0.50, C=0.25),
 )
 

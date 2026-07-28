@@ -2,7 +2,7 @@
 	(version 20260206)
 	(generator "landforge")
 	(layer "F.Cu")
-	(descr "IPC-7351B Level C Aluminum Electrolytic Capacitor 12.5x13.5mm. Table 3-20L. Z=13.95 G=10.10 X=4.05. Courtyard excess=0.25mm.")
+	(descr "IPC-7351B Level C Aluminum Electrolytic Capacitor 12.5x13.5mm. Table 3-20L. Z=13.95 G=5.45 X=2.15. Courtyard excess=0.25mm.")
 	(tags "CAPAE1250X1350L electrolytic capacitor aluminum capae 12.5mm IPC7351B density_C")
 	(property "Reference" "REF**"
 		(at 0 -1.5 0)
@@ -69,8 +69,8 @@
 		(layer "F.Fab")
 	)
 	(fp_line
-		(start -6.25 -2.185)
-		(end 6.25 -2.185)
+		(start -6.25 -1.235)
+		(end 6.25 -1.235)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -78,8 +78,8 @@
 		(layer "F.SilkS")
 	)
 	(fp_line
-		(start -6.25 2.185)
-		(end 6.25 2.185)
+		(start -6.25 1.235)
+		(end 6.25 1.235)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -117,14 +117,14 @@
 		)
 	)
 	(pad "1" smd roundrect
-		(at -6.0125 0.0)
-		(size 1.925 4.05)
+		(at -4.85 0.0)
+		(size 4.25 2.15)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.25)
 	)
 	(pad "2" smd roundrect
-		(at 6.0125 0.0)
-		(size 1.925 4.05)
+		(at 4.85 0.0)
+		(size 4.25 2.15)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.25)
 	)

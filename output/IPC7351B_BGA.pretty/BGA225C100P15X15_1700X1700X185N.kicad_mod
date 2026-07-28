@@ -1466,91 +1466,91 @@
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q1" smd circle
+	(pad "R1" smd circle
 		(at -7.0 7.0)
 		(size 0.45 0.45)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q2" smd circle
+	(pad "R2" smd circle
 		(at -6.0 7.0)
 		(size 0.45 0.45)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q3" smd circle
+	(pad "R3" smd circle
 		(at -5.0 7.0)
 		(size 0.45 0.45)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q4" smd circle
+	(pad "R4" smd circle
 		(at -4.0 7.0)
 		(size 0.45 0.45)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q5" smd circle
+	(pad "R5" smd circle
 		(at -3.0 7.0)
 		(size 0.45 0.45)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q6" smd circle
+	(pad "R6" smd circle
 		(at -2.0 7.0)
 		(size 0.45 0.45)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q7" smd circle
+	(pad "R7" smd circle
 		(at -1.0 7.0)
 		(size 0.45 0.45)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q8" smd circle
+	(pad "R8" smd circle
 		(at 0.0 7.0)
 		(size 0.45 0.45)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q9" smd circle
+	(pad "R9" smd circle
 		(at 1.0 7.0)
 		(size 0.45 0.45)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q10" smd circle
+	(pad "R10" smd circle
 		(at 2.0 7.0)
 		(size 0.45 0.45)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q11" smd circle
+	(pad "R11" smd circle
 		(at 3.0 7.0)
 		(size 0.45 0.45)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q12" smd circle
+	(pad "R12" smd circle
 		(at 4.0 7.0)
 		(size 0.45 0.45)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q13" smd circle
+	(pad "R13" smd circle
 		(at 5.0 7.0)
 		(size 0.45 0.45)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q14" smd circle
+	(pad "R14" smd circle
 		(at 6.0 7.0)
 		(size 0.45 0.45)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(pad_prop_bga)
 	)
-	(pad "Q15" smd circle
+	(pad "R15" smd circle
 		(at 7.0 7.0)
 		(size 0.45 0.45)
 		(layers "F.Cu" "F.Mask" "F.Paste")

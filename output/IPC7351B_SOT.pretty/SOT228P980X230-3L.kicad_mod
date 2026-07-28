@@ -171,8 +171,8 @@
 		(roundrect_rratio 0.25)
 	)
 	(pad "4" smd roundrect
-		(at 0.0 0.0)
-		(size 5.4 5.8)
+		(at 2.0875 0.0)
+		(size 6.375 5.65)
 		(layers "F.Cu" "F.Mask")
 		(roundrect_rratio 0.1)
 		(pad_prop_heatsink)
