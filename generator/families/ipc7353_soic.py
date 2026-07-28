@@ -35,6 +35,7 @@ from generator.core.kicad_writer import (
     Footprint, Pad, PadShape, PadType, PadProperty,
     write_footprint,
 )
+from generator.core.paste import add_thermal_paste
 from generator.core.layers import (
     add_courtyard, add_fab_body, add_silk_ic,
 )
@@ -261,10 +262,11 @@ def generate_gullwing_ic(spec: GullwingICSpec, level: DensityLevel) -> Footprint
         fp.pads.append(Pad(
             number=ep_num, pad_type=PadType.SMD, shape=PadShape.ROUNDRECT,
             x=0, y=0, width=spec.ep_width, height=spec.ep_length,
-            layers=["F.Cu", "F.Mask"],
+            layers=["F.Cu", "F.Mask"],  # Paste segmented per 3.1.5.7
             roundrect_ratio=0.1,
             property=PadProperty.HEATSINK,
         ))
+        add_thermal_paste(fp, 0, 0, spec.ep_width, spec.ep_length)
 
     return fp
 

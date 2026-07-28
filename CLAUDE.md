@@ -25,6 +25,7 @@ landforge/
 │   │   ├── tables.py            # All 22 IPC tolerance tables (3-2 through 3-22)
 │   │   ├── kicad_writer.py      # .kicad_mod serializer (format v20260206)
 │   │   ├── kicad_reader.py      # .kicad_mod parser (validation, golden tests)
+│   │   ├── paste.py             # Thermal pad paste segmentation (3.1.5.7)
 │   │   ├── layers.py            # Courtyard, silkscreen, fab layer generators
 │   │   └── naming.py            # IPC-7351B naming convention (Table 3-23)
 │   ├── families/                # One module per component family
@@ -130,7 +131,9 @@ committed to git. This is intentional:
 - Shape: `roundrect` with `roundrect_rratio 0.25` (all SMD pads)
 - Shape: `circle` for BGA balls
 - Layers: `["F.Cu", "F.Mask", "F.Paste"]` for signal pads
-- Layers: `["F.Cu", "F.Mask"]` for thermal pads (paste handled separately)
+- Layers: `["F.Cu", "F.Mask"]` for thermal pads; paste is emitted as separate
+  unnumbered `F.Paste`-only apertures per IPC-7351B 3.1.5.7 (40% of land area,
+  single aperture up to 4.0mm, grid-segmented above; see `core/paste.py`)
 - Property: `PadProperty.HEATSINK` for exposed/thermal pads
 - Property: `PadProperty.BGA` for BGA balls
 

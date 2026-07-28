@@ -41,6 +41,7 @@ from generator.core.layers import (
     add_courtyard, add_fab_body, add_silk_ic, add_polarity_mark,
     SILK_WIDTH, SILK_CLEARANCE,
 )
+from generator.core.paste import add_thermal_paste
 
 
 @dataclass
@@ -164,17 +165,19 @@ def generate_sot_footprint(spec: SotSpec, level: DensityLevel) -> Footprint:
     # side. Outer edge lands on Z/2 like any lead; length and width come
     # from the tab's own contact dimensions through the same equations.
     if lp_tab is not None:
+        tab_cx = lp_tab.pad_center_to_center / 2
         fp.pads.append(Pad(
             number=str(len(spec.pins) + 1),
             pad_type=PadType.SMD,
             shape=PadShape.ROUNDRECT,
-            x=lp_tab.pad_center_to_center / 2, y=0,
+            x=tab_cx, y=0,
             width=lp_tab.pad_length,
             height=lp_tab.pad_width,
-            layers=["F.Cu", "F.Mask"],  # Paste handled separately
+            layers=["F.Cu", "F.Mask"],  # Paste segmented per 3.1.5.7
             roundrect_ratio=0.1,
             property=PadProperty.HEATSINK,
         ))
+        add_thermal_paste(fp, tab_cx, 0, lp_tab.pad_length, lp_tab.pad_width)
 
     # Layers
     add_courtyard(fp, cy_x, cy_y)

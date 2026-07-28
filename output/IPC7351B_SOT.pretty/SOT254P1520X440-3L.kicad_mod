@@ -177,5 +177,50 @@
 		(roundrect_rratio 0.1)
 		(pad_prop_heatsink)
 	)
+	(pad "" smd rect
+		(at 1.083 -3.45)
+		(size 1.781 2.182)
+		(layers "F.Paste")
+	)
+	(pad "" smd rect
+		(at 1.083 0.0)
+		(size 1.781 2.182)
+		(layers "F.Paste")
+	)
+	(pad "" smd rect
+		(at 1.083 3.45)
+		(size 1.781 2.182)
+		(layers "F.Paste")
+	)
+	(pad "" smd rect
+		(at 3.9 -3.45)
+		(size 1.781 2.182)
+		(layers "F.Paste")
+	)
+	(pad "" smd rect
+		(at 3.9 0.0)
+		(size 1.781 2.182)
+		(layers "F.Paste")
+	)
+	(pad "" smd rect
+		(at 3.9 3.45)
+		(size 1.781 2.182)
+		(layers "F.Paste")
+	)
+	(pad "" smd rect
+		(at 6.717 -3.45)
+		(size 1.781 2.182)
+		(layers "F.Paste")
+	)
+	(pad "" smd rect
+		(at 6.717 0.0)
+		(size 1.781 2.182)
+		(layers "F.Paste")
+	)
+	(pad "" smd rect
+		(at 6.717 3.45)
+		(size 1.781 2.182)
+		(layers "F.Paste")
+	)
 	(embedded_fonts no)
 )
